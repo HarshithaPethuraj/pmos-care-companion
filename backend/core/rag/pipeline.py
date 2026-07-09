@@ -4,10 +4,17 @@ RAG pipeline orchestration for PMOS Care Companion.
 Flow:
   1. Regex fast-path guardrails (red flags, obvious diagnostic asks) - zero cost.
   2. LLM safety classifier (catches phrasings regex misses).
-  3. Hybrid retrieval (BM25 + FAISS + adaptive RRF) -> cross-encoder rerank,
-     mode-filtered by audience. Ported from IntelliRAG.
-  4. Prompt-injection filter: flagged chunks excluded from context.
+  3. Hybrid retrieval (BM25 + TF-IDF + adaptive RRF), mode-filtered by audience.
+  4. Prompt-injection filter, two layers:
+     a. Regex scan (free, instant) - excludes obvious pattern matches.
+     b. LLM classifier (small/fast model) - catches injections that don't
+        match known phrasings. Runs only on chunks that survived (a).
   5. Mode-specific prompt (patient / clinician) -> Groq LLaMA 3.3 70B.
+
+The two-layer injection defense directly addresses an external evaluation
+note (IntelliRAG eval) that a regex-only scanner is "a first layer" and a
+production system needs an LLM-based classifier for robustness against
+attacks that don't match known phrase patterns.
 
 If the knowledge base is empty (no PDFs ingested yet), retrieval is skipped
 and the prompt's "context does NOT contain the answer" branch handles it.
@@ -20,6 +27,7 @@ from backend.core.guardrails.filters import is_diagnostic_request
 from backend.core.guardrails.red_flags import check_red_flags, ESCALATION_MESSAGE
 from backend.core.guardrails.classifier import classify_intent
 from backend.core.guardrails.injection import scan_for_injection
+from backend.core.guardrails.injection_classifier import classify_chunk_injection
 from backend.core.rag.prompts import PATIENT_SYSTEM_PROMPT, CLINICIAN_SYSTEM_PROMPT
 from backend.core.rag.retrieval import retrieve_and_rerank
 from backend.services.vector_store import get_index
@@ -42,11 +50,20 @@ def _retrieve_context(query: str, mode: str) -> tuple[str, list[str], float]:
         index.chunks, index.metadatas, index.reranker, mode=mode, k=5,
     )
 
-    # Prompt-injection filter: EXCLUDE flagged chunks from context.
-    clean = []
-    for chunk, meta, score in reranked:
-        if not scan_for_injection(chunk):
-            clean.append((chunk, meta, score))
+    # Injection defense, layer 1: regex (free, instant).
+    survived_regex = [(c, m, s) for c, m, s in reranked if not scan_for_injection(c)]
+
+    if not survived_regex:
+        return "", [], 0.0
+
+    # Injection defense, layer 2: LLM classifier (small/fast model).
+    # Only runs on chunks that already passed the regex layer, keeping the
+    # added latency/cost bounded to the handful of chunks actually retrieved.
+    settings = get_settings()
+    if settings.enable_llm_injection_check:
+        clean = [(c, m, s) for c, m, s in survived_regex if not classify_chunk_injection(c)]
+    else:
+        clean = survived_regex
 
     if not clean:
         return "", [], 0.0
