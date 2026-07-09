@@ -8,7 +8,7 @@ from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 
 from backend.config import get_settings
-from backend.api.routes import health, checklist, chat, doctors, modes
+from backend.api.routes import health, checklist, chat, doctors, modes, markers
 
 settings = get_settings()
 
@@ -27,3 +27,4 @@ app.include_router(checklist.router)
 app.include_router(chat.router)
 app.include_router(doctors.router)
 app.include_router(modes.router)
+app.include_router(markers.router)
