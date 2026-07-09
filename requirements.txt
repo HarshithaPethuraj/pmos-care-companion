@@ -1,0 +1,25 @@
+# FastAPI / server
+fastapi
+uvicorn[standard]
+jinja2
+python-multipart
+pydantic
+pydantic-settings
+
+# RAG stack (versions aligned with IntelliRAG working set)
+langchain
+langchain-community
+langchain-groq
+langchain-huggingface
+langchain-text-splitters
+faiss-cpu
+sentence-transformers
+rank-bm25
+pypdf
+docx2txt
+
+# LLM client + utils
+groq
+requests
+numpy
+python-dotenv

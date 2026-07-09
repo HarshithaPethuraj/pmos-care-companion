@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block title %}Patient Mode - PMOS Care Companion{% endblock %}
+{% block content %}
+    <section class="chat-panel">
+        <h2>Ask a question</h2>
+        <p class="mode-note">Patient mode: plain language, always cites sources, never diagnoses.</p>
+
+        <form action="/ask" method="post">
+            <input type="hidden" name="mode" value="patient">
+            <textarea name="query" rows="3" placeholder="e.g. What lifestyle changes help with PMOS/PCOS symptoms?">{{ query or '' }}</textarea>
+            <button type="submit">Ask</button>
+        </form>
+
+        {% if answer %}
+        <div class="answer-box">
+            <h3>Answer</h3>
+            <p>{{ answer }}</p>
+        </div>
+        {% endif %}
+    </section>
+{% endblock %}

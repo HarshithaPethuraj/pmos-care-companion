@@ -1,0 +1,44 @@
+ESHRE/ASRM 2023 International Evidence-Based Guideline for the Assessment and Management of PCOS/PMOS - Reference Summary
+
+SOURCE NOTE: This is a study summary compiled from the publicly reported recommendations of the 2023 International Evidence-based Guideline (Teede et al., published across Human Reproduction, JCEM, and Fertility & Sterility, 2023). For clinical use, refer to the full guideline at monash.edu/medicine/mchri/pcos. Terminology reflects the May 2026 renaming of PCOS to PMOS (Polyendocrine Metabolic Ovarian Syndrome); diagnostic criteria are unchanged by the renaming.
+
+1. DIAGNOSTIC CRITERIA (ROTTERDAM 2003, REAFFIRMED 2023)
+
+Diagnosis requires at least 2 of the following 3 features, after exclusion of other causes:
+1. Oligo- or anovulation (irregular or absent ovulation). Oligomenorrhea is commonly defined as cycles longer than 35 days apart or fewer than 8 menstrual bleeds per year. Amenorrhea is fewer than 3 cycles per year.
+2. Clinical and/or biochemical hyperandrogenism. Clinical signs include hirsutism and acne. Biochemical hyperandrogenism is commonly defined as elevated total testosterone or free androgen index.
+3. Polycystic ovarian morphology on ultrasound, defined as an ovarian volume of at least 10 mL in either ovary, and/or a follicle count meeting the ultrasound threshold in use (historically 12 or more follicles measuring 2 to 9 mm per ovary; higher thresholds apply with newer high-resolution transducers).
+
+2. EXCLUSION OF OTHER CAUSES (DIFFERENTIAL DIAGNOSIS)
+
+Before confirming a PMOS/PCOS diagnosis, exclude conditions that mimic its presentation. Recommended tests include TSH (thyroid dysfunction), prolactin (hyperprolactinemia), and 17-hydroxyprogesterone (non-classic congenital adrenal hyperplasia). Where clinically indicated, also exclude Cushing's syndrome and androgen-secreting tumours. Functional hypothalamic amenorrhea (FHA) can overlap and typically shows lower estradiol, androgens, LH, and AMH than PMOS.
+
+3. USE OF AMH AND LH
+
+Anti-Mullerian hormone (AMH) may be used as an alternative to ultrasound follicle count for defining polycystic ovarian morphology in adults, but should not be used in adolescents. Elevated LH screening is no longer recommended as a diagnostic requirement.
+
+4. ADOLESCENT DIAGNOSIS
+
+In adolescents, both hyperandrogenism and ovulatory dysfunction should be present, and ultrasound morphology should not be used for diagnosis within 8 years of menarche, because multifollicular ovaries are common in normal adolescence. Where criteria are incomplete, an "at risk" designation with reassessment is advised.
+
+5. MANAGEMENT - LIFESTYLE FIRST
+
+Multicomponent lifestyle intervention (diet, exercise, behavioural strategies) is the first-line management for PMOS/PCOS across all presentations. No single diet or exercise regimen is established as superior; the goal is sustainable change. In those with overweight or obesity, weight loss of 5 to 10 percent can meaningfully improve metabolic, reproductive, and psychological outcomes. Weight management matters because excess adiposity worsens insulin resistance, which in turn aggravates the full symptom profile.
+
+6. PHARMACOLOGICAL MANAGEMENT
+
+- Combined hormonal contraceptives are first-line for managing menstrual irregularity and clinical hyperandrogenism (hirsutism, acne).
+- Metformin is beneficial for metabolic and glycemic features and can improve menstrual regularity, but has limited or no benefit for hirsutism, acne, or infertility.
+- For ovulation induction in those seeking pregnancy, letrozole is the preferred first-line agent, with clomiphene citrate as an alternative. In patients with BMI over 30, ovulation induction should be preceded by lifestyle modification to improve metabolic status.
+
+7. METABOLIC AND CARDIOVASCULAR SCREENING
+
+Routine screening for metabolic abnormalities is recommended given elevated cardiovascular and type 2 diabetes risk. For patients with BMI over 30, an oral glucose tolerance test (OGTT) is recommended when fasting glucose is normal. PMOS/PCOS is now framed as an enduring, lifelong condition with important metabolic and cardiovascular implications, not solely a reproductive one.
+
+8. PSYCHOLOGICAL SCREENING
+
+Screening for anxiety and depression is recommended, with a pragmatic approach of screening at diagnosis and repeating based on clinical judgement, risk factors, and life stage. Quality-of-life impact should be assessed.
+
+9. TERMINOLOGY UPDATE (2026)
+
+As of May 2026, the condition formerly termed Polycystic Ovary Syndrome (PCOS) has been renamed Polyendocrine Metabolic Ovarian Syndrome (PMOS) by international consensus published in The Lancet, to better reflect its multi-system endocrine and metabolic nature. Diagnostic criteria and management are unchanged. Both terms will appear in the literature during the multi-year transition.

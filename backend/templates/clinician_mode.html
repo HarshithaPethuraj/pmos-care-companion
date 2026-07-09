@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block title %}Clinician Mode - PMOS Care Companion{% endblock %}
+{% block content %}
+    <section class="chat-panel">
+        <h2>Clinical reference query</h2>
+        <p class="mode-note">Clinician mode: Rotterdam criteria detail, ESHRE/ASRM guideline content, technical tone.</p>
+
+        <form action="/ask" method="post">
+            <input type="hidden" name="mode" value="clinician">
+            <textarea name="query" rows="3" placeholder="e.g. Differential diagnosis considerations for PMOS per ESHRE/ASRM 2023">{{ query or '' }}</textarea>
+            <button type="submit">Ask</button>
+        </form>
+
+        {% if answer %}
+        <div class="answer-box">
+            <h3>Answer</h3>
+            <p>{{ answer }}</p>
+        </div>
+        {% endif %}
+    </section>
+{% endblock %}

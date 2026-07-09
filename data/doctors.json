@@ -1,0 +1,1201 @@
+{
+  "disclaimer": "This directory is for informational purposes only, based on publicly available listings. It is not a medical referral or endorsement. Please verify credentials and availability independently.",
+  "last_updated": "2026-07-02",
+  "dynamic_fallback": {
+    "enabled": true,
+    "note": "For any city not listed under static_metros, the app should call the Google Places API live at runtime using GOOGLE_PLACES_API_KEY, and cache results per city for 24h."
+  },
+  "static_metros": {
+    "chennai": {
+      "google_places_tier": {
+        "description": "Map + call directly. Sourced from Google Places.",
+        "doctors": [
+          {
+            "name": "Dr. Manu's PMOS Clinic",
+            "specialization": "PMOS/PCOS specialist",
+            "area": "T. Nagar",
+            "address": "No. 20, Crescent Park St, T. Nagar, Chennai 600017",
+            "phone": "+91 7397 787 337",
+            "rating": 4.7,
+            "rating_count": 30,
+            "maps_url": "https://maps.google.com/?cid=6471684871916727196",
+            "place_id": "ChIJ4e2-fxBnUjoRnKvdQBoL0Fk"
+          },
+          {
+            "name": "Dr Manu's Hospital",
+            "specialization": "General gynec / PMOS-PCOS",
+            "area": "T. Nagar",
+            "address": "No. 20, Crescent Park St, T-nagar, Chennai 600017",
+            "phone": "+91 98402 84460",
+            "rating": 4.9,
+            "rating_count": 220,
+            "maps_url": "https://maps.google.com/?cid=18138604078442698907",
+            "place_id": "ChIJLTtB6xpnUjoRm1gHkU5Eufs"
+          },
+          {
+            "name": "Dr Radha Shakuntala (GKM Hospital)",
+            "specialization": "General gynec",
+            "area": "Purasaiwakkam",
+            "address": "GKM Hospital, 113, P.B. Road, Vepery, Purasaiwakkam, Chennai 600084",
+            "phone": "+91 44 4390 3333",
+            "rating": 5.0,
+            "rating_count": 157,
+            "maps_url": "https://maps.google.com/?cid=17946324718843480176",
+            "place_id": "ChIJR2D6GpplUjoRcEh6gj8nDvk"
+          },
+          {
+            "name": "Dr Padmapriya Vivek",
+            "specialization": "General gynec / fertility",
+            "area": "Perumbakkam",
+            "address": "439, Gleneagles Global Health City, Cheran Nagar, Perumbakkam, Chennai 600100",
+            "phone": "+91 96770 24215",
+            "rating": 4.9,
+            "rating_count": 2313,
+            "maps_url": "https://maps.google.com/?cid=17892174317055175051",
+            "place_id": "ChIJqSfTeQpcUjoRi-lwm77FTfg"
+          },
+          {
+            "name": "Apollo Women's Hospital",
+            "specialization": "General gynec / multi-specialty",
+            "area": "Thousand Lights",
+            "address": "16/7, Shafee Mohammed Rd, Thousand Lights West, Chennai 600006",
+            "phone": "+91 80 6297 2808",
+            "rating": 4.8,
+            "rating_count": 8581,
+            "maps_url": "https://maps.google.com/?cid=13825853348746277738",
+            "place_id": "ChIJbx53lGpmUjoRarOqQF5M378"
+          },
+          {
+            "name": "Dr. V. Abarajda",
+            "specialization": "Fertility / IVF specialist",
+            "area": "Nolambur",
+            "address": "Plot no 1, VGN Nagar, Phase 1, Nolambur, Ambattur Industrial Estate, Chennai 600095",
+            "phone": "+91 86086 01590",
+            "rating": 5.0,
+            "rating_count": 335,
+            "maps_url": "https://maps.google.com/?cid=8205262556093837954",
+            "place_id": "ChIJaXxRfdNjUjoRgnLJSNLy3nE"
+          },
+          {
+            "name": "Cloudnine Hospital - T Nagar",
+            "specialization": "General gynec / maternity",
+            "area": "T. Nagar",
+            "address": "54, Vijaya Raghav Road, T. Nagar, Chennai 600017",
+            "phone": "+91 99728 99728",
+            "rating": 4.9,
+            "rating_count": 6235,
+            "maps_url": "https://maps.google.com/?cid=11709367447576616655",
+            "place_id": "ChIJxXRUeSoWrjsRz55TmacHgKI"
+          },
+          {
+            "name": "Dr.M.H.Abinaya",
+            "specialization": "General gynec",
+            "area": "T. Nagar",
+            "address": "15, 1st Cross St, Gangai Karai Puram, T. Nagar, Chennai 600017",
+            "phone": "+91 98406 52740",
+            "rating": 4.9,
+            "rating_count": 327,
+            "maps_url": "https://maps.google.com/?cid=2356920062132195350",
+            "place_id": "ChIJzzkYMFtmUjoRFpBhG092tSA"
+          },
+          {
+            "name": "Dr Rajeswari's Magna Gynec Clinic",
+            "specialization": "General gynec / fertility",
+            "area": "Ashok Nagar",
+            "address": "9(12), 80TH STREET, 18th Ave, Sector 10, Ashok Nagar, Chennai 600083",
+            "phone": "+91 72004 00075",
+            "rating": 4.8,
+            "rating_count": 520,
+            "maps_url": "https://maps.google.com/?cid=984904438667159297",
+            "place_id": "ChIJrdzHtuBmUjoRASd2ZF4Vqw0"
+          },
+          {
+            "name": "Dr. Mathangi Rajagopalan",
+            "specialization": "General gynec / obstetrician",
+            "area": "Guindy",
+            "address": "Room No 2, Metro Station, 157, Anna Salai, Guindy, Chennai 600015",
+            "phone": "+91 80 4176 3647",
+            "rating": 4.9,
+            "rating_count": 138,
+            "maps_url": "https://maps.google.com/?cid=5067701873916392821",
+            "place_id": "ChIJmzbVpFpnUjoRdTVeJgEYVEY"
+          },
+          {
+            "name": "Dr. Sumana Manohar (Apollo)",
+            "specialization": "General gynec",
+            "area": "Thousand Lights",
+            "address": "No. 15, Apollo Womens Hospital, Shafee Mohammed Rd, Chennai 600006",
+            "phone": "+91 80 6297 0097",
+            "rating": 4.6,
+            "rating_count": 351,
+            "maps_url": "https://maps.google.com/?cid=15505384557275133530",
+            "place_id": "ChIJCW5lrhZnUjoRWjY2khoxLtc"
+          },
+          {
+            "name": "Indigo Women's Center",
+            "specialization": "Fertility",
+            "area": "Anna Nagar",
+            "address": "No. 995, B - H, 2nd Ave, Anna Nagar West, Chennai 600040",
+            "phone": "+91 70808 08087",
+            "rating": 4.9,
+            "rating_count": 2437,
+            "maps_url": "https://maps.google.com/?cid=9672672286095967633",
+            "place_id": "ChIJ9w2yShlkUjoRkQWEOTI8PIY"
+          },
+          {
+            "name": "Dr. Rukkayal Fathima",
+            "specialization": "General gynec",
+            "area": "Mylapore",
+            "address": "149, 1, Luz Church Rd, Bhaskarapuram, Mylapore, Chennai 600004",
+            "phone": "+91 90257 75110",
+            "rating": 5.0,
+            "rating_count": 1342,
+            "maps_url": "https://maps.google.com/?cid=363830752972695524",
+            "place_id": "ChIJY8AKajNmUjoR5OdMZSSWDAU"
+          },
+          {
+            "name": "Dr. Ramya Sridharan",
+            "specialization": "General gynec",
+            "area": "Adyar",
+            "address": "New # 4, Canal Bank Rd, Gandhi Nagar, Adyar, Chennai 600020",
+            "phone": "+91 98416 98345",
+            "rating": 4.9,
+            "rating_count": 80,
+            "maps_url": null,
+            "place_id": "ChIJ6QcBSVtnUjoRDNKK3M81jHY"
+          },
+          {
+            "name": "Dr Kavya Krishnakumar",
+            "specialization": "General gynec",
+            "area": "Adyar",
+            "address": "Tara Clinic, Venkata Rathinam Nagar, Adyar, Chennai 600020",
+            "phone": "+91 91761 72403",
+            "rating": 5.0,
+            "rating_count": 144,
+            "maps_url": null,
+            "place_id": "ChIJhZeoLdBnUjoRB6-7phsEBBk"
+          },
+          {
+            "name": "Dr Girija Swaminathan",
+            "specialization": "General gynec / obstetrician",
+            "area": "Adyar",
+            "address": "MGM Malar, Gandhi Nagar 1st Main Rd, Adyar, Chennai 600020",
+            "phone": null,
+            "rating": 5.0,
+            "rating_count": 33,
+            "maps_url": null,
+            "place_id": "ChIJVcmxiT5nUjoRd_5qLEJuwhY"
+          },
+          {
+            "name": "Dr.Krithika Muthusamy",
+            "specialization": "General gynec",
+            "area": "Adyar",
+            "address": "58, Dr Muthu Lakshmi Rd, Indira Nagar, Adyar, Chennai 600041",
+            "phone": "+91 86800 51247",
+            "rating": 4.9,
+            "rating_count": 50,
+            "maps_url": null,
+            "place_id": "ChIJqVWYgzpnUjoRhqK3VQgLtuI"
+          },
+          {
+            "name": "Dr. K. S. Ramya",
+            "specialization": "Fertility / laparoscopic surgeon",
+            "area": "Velachery",
+            "address": "2, 3rd street, Taramani Link Rd, Tansi Nagar, Velachery, Chennai 600042",
+            "phone": "+91 75500 10750",
+            "rating": 4.9,
+            "rating_count": 386,
+            "maps_url": null,
+            "place_id": "ChIJgUAL2o9dUjoRPeriqjFRJqw"
+          },
+          {
+            "name": "Dr M Kokilavani",
+            "specialization": "General gynec",
+            "area": "Velachery",
+            "address": "9 B, Selvanagar main road, VGP Selva Nagar Extension, Velachery, Chennai 600042",
+            "phone": "+91 63804 68740",
+            "rating": 4.9,
+            "rating_count": 449,
+            "maps_url": null,
+            "place_id": "ChIJRwRA-kVdUjoRscxyc3Yw_78"
+          },
+          {
+            "name": "Dr. Deepa Thangamani",
+            "specialization": "General gynec / laparoscopic",
+            "area": "Kilpauk",
+            "address": "Apollo First Med Hospitals, 154, Poonamallee High Rd, Kilpauk, Chennai 600010",
+            "phone": "+91 80 6297 2772",
+            "rating": 4.8,
+            "rating_count": 116,
+            "maps_url": null,
+            "place_id": "ChIJH3jkn2tmUjoRpgFdwLqHeSE"
+          },
+          {
+            "name": "Dr. Deepa Ganesh (DG Laser & Cosmetic Gynecology Clinic)",
+            "specialization": "Cosmetic / laser gynecology",
+            "area": "Kilpauk",
+            "address": "No. 8, Rams Flat, Gajapathy Street, Barnaby Rd, Kilpauk, Chennai 600010",
+            "phone": "+91 98401 65658",
+            "rating": 4.9,
+            "rating_count": 980,
+            "maps_url": null,
+            "place_id": "ChIJuyi2x35nUjoRKK0TFUGyEgk"
+          },
+          {
+            "name": "Dr Anshu Bansal",
+            "specialization": "General gynec / obstetrician",
+            "area": "Kilpauk",
+            "address": "38A, ThambuSwamy Rd, Kilpauk, Chennai 600010",
+            "phone": "+91 98402 68073",
+            "rating": 4.9,
+            "rating_count": 73,
+            "maps_url": null,
+            "place_id": "ChIJ5aNwKKJlUjoR8Cowcf6k49E"
+          }
+        ]
+      },
+      "practo_tier": {
+        "description": "Book appointment / compare by fee, experience, recommendation %. Sourced from Practo.",
+        "doctors": [
+          {
+            "name": "Dr. S. Samundi Sankari",
+            "specialization": "General gynec / fertility",
+            "area": "Ramapuram",
+            "experience_years": 54,
+            "consultation_fee_inr": 1000,
+            "recommended_pct": 93,
+            "patient_story_count": 1106,
+            "profile_url": null
+          },
+          {
+            "name": "Dr. P. Preethi",
+            "specialization": "General gynec / fertility",
+            "area": "Tharamani",
+            "experience_years": 36,
+            "consultation_fee_inr": 1200,
+            "recommended_pct": 94,
+            "patient_story_count": 152,
+            "profile_url": null
+          },
+          {
+            "name": "Dr. Chithra",
+            "specialization": "General gynec / fertility",
+            "area": "East Tambaram",
+            "experience_years": 28,
+            "consultation_fee_inr": 500,
+            "recommended_pct": 91,
+            "patient_story_count": 265,
+            "profile_url": null
+          },
+          {
+            "name": "Dr. Vanitha Shri",
+            "specialization": "General gynec / fertility",
+            "area": "Anna Nagar",
+            "experience_years": 23,
+            "consultation_fee_inr": 800,
+            "recommended_pct": 93,
+            "patient_story_count": 126,
+            "profile_url": null
+          },
+          {
+            "name": "Dr. Padma Priya B",
+            "specialization": "General gynec / fertility",
+            "area": "Kodambakkam",
+            "experience_years": 22,
+            "consultation_fee_inr": 500,
+            "recommended_pct": 89,
+            "patient_story_count": 27,
+            "profile_url": null
+          },
+          {
+            "name": "Dr. Sadhana Vezhaventhan",
+            "specialization": "General gynec / fertility",
+            "area": "Saidapet",
+            "experience_years": 27,
+            "consultation_fee_inr": 500,
+            "recommended_pct": 95,
+            "patient_story_count": 32,
+            "profile_url": null
+          },
+          {
+            "name": "Dr. Nandhini Elumalai",
+            "specialization": "General gynec / obstetrician",
+            "area": "Ramapuram",
+            "experience_years": 15,
+            "consultation_fee_inr": 600,
+            "recommended_pct": 88,
+            "patient_story_count": 17,
+            "profile_url": null
+          },
+          {
+            "name": "Dr. P Krishnamma",
+            "specialization": "General gynec / obstetrician",
+            "area": "Purasawakkam",
+            "experience_years": 51,
+            "consultation_fee_inr": 500,
+            "recommended_pct": 80,
+            "patient_story_count": 25,
+            "profile_url": null
+          },
+          {
+            "name": "Dr. P. Varalakshmi Srinivasan",
+            "specialization": "General gynec / obstetrician",
+            "area": "Purasawakkam",
+            "experience_years": 37,
+            "consultation_fee_inr": 600,
+            "recommended_pct": 81,
+            "patient_story_count": 15,
+            "profile_url": null
+          },
+          {
+            "name": "Dr. S Rajeswari",
+            "specialization": "General gynec / obstetrician",
+            "area": "Tharamani",
+            "experience_years": 25,
+            "consultation_fee_inr": 1200,
+            "recommended_pct": 67,
+            "patient_story_count": 1,
+            "profile_url": null,
+            "note": "Low sample size (1 patient story) - include with caution or lower default sort priority"
+          }
+        ]
+      }
+    },
+    "bengaluru": {
+      "google_places_tier": {
+        "description": "Map + call directly. Sourced from Google Places.",
+        "doctors": [
+          {
+            "name": "Dr. Sriprada Vinekar",
+            "specialization": "Laparoscopic gynecology",
+            "area": "Kodihalli",
+            "address": "Manipal Hospital, 98, HAL Old Airport Rd, Kodihalli, Bengaluru 560017",
+            "phone": "+91 1800 102 4647",
+            "rating": 5.0,
+            "rating_count": 682,
+            "maps_url": null,
+            "place_id": "ChIJQ_hfDxgWrjsRBXOwN4ysRUA"
+          },
+          {
+            "name": "Dr. Jayashree Nagraj Bhasgi",
+            "specialization": "General gynec / obstetrician",
+            "area": "Richmond Town",
+            "address": "Vikram Aura Hospital, Richmond Road, Xavier Layout, Bengaluru 560025",
+            "phone": "+91 70224 00800",
+            "rating": 5.0,
+            "rating_count": 183,
+            "maps_url": null,
+            "place_id": "ChIJeUrz7_EVrjsRltVtK7tly8I"
+          },
+          {
+            "name": "Dr. Phani Madhuri",
+            "specialization": "General gynec / fertility",
+            "area": "Jayanagar",
+            "address": "5th Block, 25, 47th Cross Rd, TMC Layout, Jayanagar, Bengaluru 560041",
+            "phone": "+91 1860 500 1066",
+            "rating": 4.9,
+            "rating_count": 1133,
+            "maps_url": null,
+            "place_id": "ChIJLaCLIt8VrjsR5Cdt0XvQyV0"
+          },
+          {
+            "name": "Dr. Shruthi M N",
+            "specialization": "Pregnancy care / infertility",
+            "area": "Banashankari",
+            "address": "Kusuma Hospital, 10th Main Rd, Srinagar, Banashankari, Bengaluru 560050",
+            "phone": null,
+            "rating": 5.0,
+            "rating_count": 18,
+            "maps_url": null,
+            "place_id": "ChIJlXJe53c_rjsR8noyemKlPYw"
+          },
+          {
+            "name": "Dr. Prathima Reddy",
+            "specialization": "General gynec",
+            "area": "Vasanth Nagar",
+            "address": "SPARSH Hospital for Women and Children, 146, Infantry Rd, Bengaluru 560001",
+            "phone": "+91 80 6122 2000",
+            "rating": 4.9,
+            "rating_count": 537,
+            "maps_url": null,
+            "place_id": "ChIJGz1R6ZUVrjsRcgIy9vZ-L9k"
+          },
+          {
+            "name": "Dr. Rekha V",
+            "specialization": "General gynec",
+            "area": "Kumaraswamy Layout",
+            "address": "24, SDR Mansion, 14th Main Rd, Kumaraswamy Layout, Bengaluru 560111",
+            "phone": "+91 63641 41465",
+            "rating": 4.9,
+            "rating_count": 451,
+            "maps_url": null,
+            "place_id": "ChIJYWbdYGIVrjsRrW0MyfecjTE"
+          },
+          {
+            "name": "Dr. Shafalika S.B",
+            "specialization": "General gynec / laparoscopic",
+            "area": "Hebbal",
+            "address": "Manipal Hospital Hebbal, Block C, Kirloskar Business Park, Bengaluru 560024",
+            "phone": "+91 1800 102 4647",
+            "rating": 5.0,
+            "rating_count": 1503,
+            "maps_url": null,
+            "place_id": "ChIJ3VWayZUXrjsRYKcApdCv0Io"
+          },
+          {
+            "name": "Shree Kaustubha Women's Specialty Clinic (Dr Divyasree)",
+            "specialization": "General gynec / fertility",
+            "area": "Annapurneshwari Nagar",
+            "address": "11/2, Muddinapalya Main Rd, Annapurneshwari Nagar, Bengaluru 560091",
+            "phone": "+91 94493 56479",
+            "rating": 5.0,
+            "rating_count": 207,
+            "maps_url": null,
+            "place_id": "ChIJ5Qb6fhM9rjsRIXfh5fQePLA"
+          },
+          {
+            "name": "Kinder Women's Hospital & Fertility Centre",
+            "specialization": "Fertility / IVF",
+            "area": "Krishnarajapuram",
+            "address": "40F, Doddanekundi Industrial Area, Hoodi, Krishnarajapuram, Bengaluru 560048",
+            "phone": "+91 86189 99833",
+            "rating": 4.8,
+            "rating_count": 2917,
+            "maps_url": null,
+            "place_id": "ChIJRXFOqQ4RrjsRgaBUgLZ3KHc"
+          },
+          {
+            "name": "Dr Priya S P Patil",
+            "specialization": "General gynec / PCOS-PMOS",
+            "area": "Rajajinagar",
+            "address": "59th Cross, 4th Block, Rajajinagar, Bengaluru 560010",
+            "phone": "+91 97386 22542",
+            "rating": 5.0,
+            "rating_count": 114,
+            "maps_url": null,
+            "place_id": "ChIJ64uulhg9rjsRkEgTa0jYBno"
+          },
+          {
+            "name": "Dr Smrithi D Nayak",
+            "specialization": "Fertility / laparoscopic surgeon",
+            "area": "J.P. Nagar",
+            "address": "Aster RV Hospital, CA 37, 24th Main Rd, J.P. Nagar, Bengaluru 560078",
+            "phone": "+91 73385 52655",
+            "rating": 5.0,
+            "rating_count": 147,
+            "maps_url": null,
+            "place_id": "ChIJZYNIg2c_rjsRUdjapqfd_rw"
+          },
+          {
+            "name": "Dr. Aruna Kumari V",
+            "specialization": "General gynec",
+            "area": "Bellandur",
+            "address": "1/79/4, Service Rd, Bellandur, Bengaluru 560103",
+            "phone": "+91 99728 99728",
+            "rating": 4.7,
+            "rating_count": 127,
+            "maps_url": null,
+            "place_id": "ChIJb-ed-J8TrjsRxQDDI13ooc0"
+          },
+          {
+            "name": "Dr Archana Agarwal",
+            "specialization": "Fertility / PCOD-PMOS",
+            "area": "Marathahalli",
+            "address": "Mannat Fertility Clinic, Kisan Icon 90, Outer Ring Rd, Marathahalli, Bengaluru 560037",
+            "phone": "+91 93807 91398",
+            "rating": 4.5,
+            "rating_count": 13,
+            "maps_url": null,
+            "place_id": "ChIJBaNq_csVrjsRNQrPQL23tgs"
+          }
+        ]
+      },
+      "practo_tier": {
+        "description": "Not yet curated for this metro.",
+        "doctors": []
+      }
+    },
+    "mumbai": {
+      "google_places_tier": {
+        "description": "Map + call directly. Sourced from Google Places.",
+        "doctors": [
+          {
+            "name": "Dr. Shruti Shah - PCOS & Hormonal Health Clinic",
+            "specialization": "PCOS/PMOS specialist",
+            "area": "Kandivali West",
+            "address": "1st floor, Darshan Orthopaedic Surgical Clinic, Swami Vivekanand Rd, Kandivali West, Mumbai 400064",
+            "phone": "+91 93215 05185",
+            "rating": 5.0,
+            "rating_count": 43,
+            "maps_url": null,
+            "place_id": "ChIJhTYPSJW35zsRGFSOizGSLl8"
+          },
+          {
+            "name": "Dr. Sandhya Shah",
+            "specialization": "PCOD / infertility / menstrual disorders",
+            "area": "Bandra East",
+            "address": "Guru Nanak Hospital, S-341, Gandhi Nagar, Bandra East, Mumbai 400051",
+            "phone": "+91 98211 40244",
+            "rating": 4.9,
+            "rating_count": 91,
+            "maps_url": null,
+            "place_id": "ChIJA_0YSeDJ5zsRnXGBIQVKqRo"
+          },
+          {
+            "name": "Dr Rana Choudhary",
+            "specialization": "Obstetrician / IVF / fertility",
+            "area": "Agripada",
+            "address": "Wockhardt Hospitals, Dr Anandrao Nair Marg, Agripada, Mumbai 400011",
+            "phone": "+91 73043 56761",
+            "rating": 5.0,
+            "rating_count": 788,
+            "maps_url": null,
+            "place_id": "ChIJtbr2xYPP5zsRe-goXvQjeZQ"
+          },
+          {
+            "name": "Dr. Shweta Shah",
+            "specialization": "General gynec / obstetrician",
+            "area": "Vile Parle West",
+            "address": "Vaibhav building, 140, Swami Vivekanand road, Irla, Vile Parle West, Mumbai 400056",
+            "phone": "+91 97698 88955",
+            "rating": 4.9,
+            "rating_count": 542,
+            "maps_url": null,
+            "place_id": "ChIJdU5i8CKFXjkR4BUtbQEAHM8"
+          },
+          {
+            "name": "Dr. Pranay Desai (AGES Clinic)",
+            "specialization": "Laparoscopic / endometriosis / cosmetic gynec",
+            "area": "Estate / Subhash Nagar",
+            "address": "Nirmala Maternity & Surgical Hospital, NM Joshi Marg, Mumbai 400011",
+            "phone": "+91 88501 26760",
+            "rating": 4.9,
+            "rating_count": 53,
+            "maps_url": null,
+            "place_id": "ChIJu7wZwhLP5zsRFUdsIEx_hew"
+          },
+          {
+            "name": "Dr Spenta Sumondy",
+            "specialization": "PCOD / fertility / general gynec",
+            "area": "Tardeo / Lower Parel",
+            "address": "Bhatia Hospital OPD, Tardeo Rd, Anand Nagar, Tardeo, Mumbai 400026",
+            "phone": "+91 98216 95165",
+            "rating": 4.8,
+            "rating_count": 67,
+            "maps_url": null,
+            "place_id": "ChIJ3cDX5sXP5zsRyHdF5vDPW0Q"
+          },
+          {
+            "name": "Dr. ANKESH R SAHETYA",
+            "specialization": "PCOD / IVF / general gynec",
+            "area": "Andheri West",
+            "address": "83-Nebulla, 4th Cross Rd, Lokhandwala Complex, Andheri West, Mumbai 400053",
+            "phone": "+91 98203 05454",
+            "rating": 4.9,
+            "rating_count": 562,
+            "maps_url": null,
+            "place_id": "ChIJFbB-TIm35zsRS2KFAJwPqts"
+          },
+          {
+            "name": "Dr. Sudeshna Ray",
+            "specialization": "Robotic surgeon / fibroid / endometriosis",
+            "area": "Gamdevi",
+            "address": "Geeta Building B, Pandita Ramabai Marg, Gamdevi, Mumbai 400007",
+            "phone": "+91 98928 75329",
+            "rating": 5.0,
+            "rating_count": 188,
+            "maps_url": null,
+            "place_id": "ChIJ1ZHQ0nbO5zsRoV_fYHWF33Y"
+          },
+          {
+            "name": "Dr. Niraj Mahajan",
+            "specialization": "General gynec / laparoscopic surgeon",
+            "area": "Tardeo",
+            "address": "Apollo Spectra Hospitals, Pt. M.M Malviya Road, Tardeo, Mumbai 400034",
+            "phone": "+91 90046 96920",
+            "rating": 4.9,
+            "rating_count": 92,
+            "maps_url": null,
+            "place_id": "ChIJFUFTtW7O5zsRliDGzbQpA0A"
+          },
+          {
+            "name": "Dr Jay Mehta (Shree IVF and Endometriosis Hospital)",
+            "specialization": "IVF / endometriosis specialist",
+            "area": "Ghatkopar East",
+            "address": "5th Floor, Jayant Arcade, Mahatma Gandhi Road, Ghatkopar East, Mumbai 400077",
+            "phone": "+91 1800 268 4000",
+            "rating": 4.9,
+            "rating_count": 5641,
+            "maps_url": null,
+            "place_id": "ChIJuzNCRSnG5zsRPJ0XY94FdjM"
+          },
+          {
+            "name": "Dr.Anshumala Shukla Kulkarni",
+            "specialization": "Robotic surgeon / laparoscopic / endometriosis",
+            "area": "Andheri West",
+            "address": "8th Floor, Kokilaben Hospital, Four Bungalows, Andheri West, Mumbai 400053",
+            "phone": "+91 22 4269 6969",
+            "rating": 4.7,
+            "rating_count": 231,
+            "maps_url": null,
+            "place_id": "ChIJdwlP1x625zsR5lv006IeVLA"
+          }
+        ]
+      },
+      "practo_tier": {
+        "description": "Not yet curated for this metro.",
+        "doctors": []
+      }
+    },
+    "delhi": {
+      "google_places_tier": {
+        "description": "Map + call directly. Sourced from Google Places.",
+        "doctors": [
+          {
+            "name": "Dr Shabnam",
+            "specialization": "PCOS/PCOD holistic specialist",
+            "area": "Mehrauli",
+            "address": "Dr Shabnam Polyclinic, H No. 1068, Mehrauli Village, Mehrauli, New Delhi 110030",
+            "phone": null,
+            "rating": 4.8,
+            "rating_count": 223,
+            "maps_url": null,
+            "place_id": "ChIJfXhinSUDDTkRKW9d1Q14whQ"
+          },
+          {
+            "name": "Dr Renu Singh",
+            "specialization": "PCOD / fibroid",
+            "area": "Paschim Vihar",
+            "address": "Gyne OPD, Plot-2, Inder Enclave, Paschim Vihar, Delhi 110087",
+            "phone": "+91 96544 51104",
+            "rating": 5.0,
+            "rating_count": 103,
+            "maps_url": null,
+            "place_id": "ChIJn8pCgZ8FDTkRaUoaLWdajm4"
+          },
+          {
+            "name": "DR. SURABHI TYAGI",
+            "specialization": "General gynec / obstetrician",
+            "area": "Burari",
+            "address": "Hardev Multispeciality Hospital, Uttaranchal Enclave, Burari, Delhi 110084",
+            "phone": "+91 95998 95686",
+            "rating": 4.9,
+            "rating_count": 210,
+            "maps_url": null,
+            "place_id": "ChIJheWqH1YBDTkRtazrJ3NLAVE"
+          },
+          {
+            "name": "Dr. Tanudeep Kaur",
+            "specialization": "Obstetrician / cosmetic gynec / urogynecology",
+            "area": "Pitampura",
+            "address": "19, Vasudha Enclave, Sandesh Vihar, Pitampura, New Delhi 110034",
+            "phone": "+91 95607 40440",
+            "rating": 5.0,
+            "rating_count": 517,
+            "maps_url": null,
+            "place_id": "ChIJgywVprADDTkR_bQYDYlMoeU"
+          },
+          {
+            "name": "Dr (Prof) Sadhana Kala",
+            "specialization": "General gynec",
+            "area": "Greater Kailash",
+            "address": "Apollo Cradle Royale Hospital, Outer Ring Rd, Greater Kailash-1, New Delhi 110048",
+            "phone": "+91 99998 89464",
+            "rating": 4.9,
+            "rating_count": 720,
+            "maps_url": null,
+            "place_id": "ChIJ7_MGSGTjDDkRVCKllRKJnq4"
+          },
+          {
+            "name": "Dr Vaishali Sharma",
+            "specialization": "General gynec / ovarian cyst specialist",
+            "area": "Panchsheel Park",
+            "address": "S-345, Block S, Panchsheel Park South, New Delhi 110017",
+            "phone": "+91 96500 35345",
+            "rating": 4.9,
+            "rating_count": 588,
+            "maps_url": null,
+            "place_id": "ChIJS_x_EtnjDDkRF1B1vrxu3Dc"
+          },
+          {
+            "name": "Dr. Usha M Kumar",
+            "specialization": "Gynae laparoscopic surgeon",
+            "area": "Saket",
+            "address": "Max Smart Super Speciality Hospital, Press Enclave Marg, Saket, New Delhi 110017",
+            "phone": "+91 99992 93741",
+            "rating": 4.8,
+            "rating_count": 496,
+            "maps_url": null,
+            "place_id": "ChIJ-9M22PLhDDkRfERlCMxVPcs"
+          },
+          {
+            "name": "Dr Shakuntla Kumar",
+            "specialization": "General gynec",
+            "area": "GTB Nagar",
+            "address": "1616, Outram Lines, GTB Nagar, Delhi 110033",
+            "phone": "+91 11 4700 5555",
+            "rating": 4.9,
+            "rating_count": 586,
+            "maps_url": null,
+            "place_id": "ChIJJUD-XnT9DDkRGeyfnQ0IWQw"
+          },
+          {
+            "name": "Dr Madhu Goel",
+            "specialization": "General gynec / obstetrician",
+            "area": "Greater Kailash II",
+            "address": "Goel's Clinic M-179, Block M, Greater Kailash II, New Delhi 110048",
+            "phone": "+91 98104 80920",
+            "rating": 5.0,
+            "rating_count": 285,
+            "maps_url": null,
+            "place_id": "ChIJRwIZ6OzlDDkRAbTWiWF0dew"
+          },
+          {
+            "name": "Dr Meghana Lal",
+            "specialization": "General gynec / obstetrician",
+            "area": "Vasant Kunj",
+            "address": "4430, Sector B Rd, Pocket 5 & 6, Vasant Kunj, New Delhi 110070",
+            "phone": "+91 98187 06379",
+            "rating": 4.9,
+            "rating_count": 515,
+            "maps_url": null,
+            "place_id": "ChIJW4mAzB0fDTkRPnB3kkbUB4Y"
+          },
+          {
+            "name": "Dr. Shilpa Dhameja",
+            "specialization": "Obstetrician / natural birth advocate",
+            "area": "Vasant Kunj",
+            "address": "Gate No.3, Green Glade Apartments, Sector B, Vasant Kunj, Delhi 110070",
+            "phone": "+91 98108 54461",
+            "rating": 4.8,
+            "rating_count": 694,
+            "maps_url": null,
+            "place_id": "ChIJ_____48eDTkRp8nq-zR1W2g"
+          },
+          {
+            "name": "Dr Prerna Gupta",
+            "specialization": "Infertility specialist",
+            "area": "Hauz Khas",
+            "address": "D-10, Hauz Khas Market, Block D, Hauz Khas, New Delhi 110016",
+            "phone": "+91 99107 24959",
+            "rating": 4.8,
+            "rating_count": 588,
+            "maps_url": null,
+            "place_id": "ChIJK0I3ZVgdDTkRO7nknP-0O_E"
+          },
+          {
+            "name": "Dr.Tejashri Shrotri (Medfemme Women's Clinic)",
+            "specialization": "Fertility / IUI-IVF",
+            "area": "Hauz Khas",
+            "address": "Medfemme, LGF, Z-33, Hauz Khas, New Delhi 110016",
+            "phone": "+91 85888 57978",
+            "rating": 4.9,
+            "rating_count": 475,
+            "maps_url": null,
+            "place_id": "ChIJK7NB8nfiDDkRrFEhugBE6HE"
+          }
+        ]
+      },
+      "practo_tier": {
+        "description": "Not yet curated for this metro.",
+        "doctors": []
+      }
+    },
+    "ncr": {
+      "google_places_tier": {
+        "description": "Map + call directly. Covers Gurugram and Noida. Sourced from Google Places.",
+        "doctors": [
+          {
+            "name": "Dr Namita Jain",
+            "specialization": "Infertility expert / PCOS / laparoscopic-hysteroscopic surgery",
+            "area": "Gurugram (Sushant Lok)",
+            "address": "Paras Hospital, Block C, Sushant Lok Phase I, Sector 43, Gurugram, Haryana 122009",
+            "phone": "+91 98991 42849",
+            "rating": 4.9,
+            "rating_count": 346,
+            "maps_url": null,
+            "place_id": "ChIJpUWzTiQZDTkR0u9263mDl5k"
+          },
+          {
+            "name": "Dr Priyanka Yadav",
+            "specialization": "Infertility specialist / PCOD specialist",
+            "area": "Gurugram (Sector 31)",
+            "address": "Gynae Clinic, 510, Sector 31, Gurugram, Haryana 122001",
+            "phone": "+91 70233 33494",
+            "rating": 4.8,
+            "rating_count": 422,
+            "maps_url": null,
+            "place_id": "ChIJ724-d1kYDTkRSPZw8HOxr9c"
+          },
+          {
+            "name": "Getwell Prime Clinic (Dr Monika Choudhary)",
+            "specialization": "Laparoscopic surgeon / PCOD specialist",
+            "area": "Gurugram (Sector 50)",
+            "address": "Fifth floor, Tower-A, Unitech Business Zone, Sector 50, Gurugram, Haryana 122018",
+            "phone": "+91 82850 86069",
+            "rating": 5.0,
+            "rating_count": 143,
+            "maps_url": null,
+            "place_id": "ChIJoY0FZjAZDTkRhVcCDnrg2dA"
+          },
+          {
+            "name": "Dr. Alka Kriplani",
+            "specialization": "General gynec (Chairperson Obs & Gynae)",
+            "area": "Gurugram (Sushant Lok)",
+            "address": "Paras Hospital, Sushant Lok Phase I, Sector 43, Gurugram, Haryana 122009",
+            "phone": "+91 78350 84927",
+            "rating": 4.9,
+            "rating_count": 703,
+            "maps_url": null,
+            "place_id": "ChIJHeRsypAZDTkRnhz9TSrEw3k"
+          },
+          {
+            "name": "Dr Arti Gupta",
+            "specialization": "General gynec",
+            "area": "Gurugram (South City I)",
+            "address": "D-Block, South City I, Sector 41, Gurugram, Haryana 122003",
+            "phone": "+91 85888 23257",
+            "rating": 4.9,
+            "rating_count": 1326,
+            "maps_url": null,
+            "place_id": "ChIJOYwXbwYiDTkRPabbmISpD4k"
+          },
+          {
+            "name": "Dr. Amita Shah",
+            "specialization": "Laparoscopic surgeon / fibroid specialist",
+            "area": "Gurugram (Palam Vihar)",
+            "address": "Manipal Hospital, Carterpuri Village, Palam Vihar, Gurugram, Haryana 122017",
+            "phone": "+91 97739 75611",
+            "rating": 4.9,
+            "rating_count": 688,
+            "maps_url": null,
+            "place_id": "ChIJIRXpSxIZDTkRp3ZEcR7PjMk"
+          },
+          {
+            "name": "Dr. Neha Gupta",
+            "specialization": "Obstetrician / gynec surgeon",
+            "area": "Gurugram (Medanta)",
+            "address": "Medanta - The Medicity, Sector 38, Gurugram, Haryana 122018",
+            "phone": "+91 124 483 4574",
+            "rating": 4.9,
+            "rating_count": 430,
+            "maps_url": null,
+            "place_id": "ChIJHfajmU8YDTkRYZsjs1_sla4"
+          },
+          {
+            "name": "Dr. Anu Sidana (Aastha Medicare)",
+            "specialization": "Fertility specialist / laparoscopic surgeon",
+            "area": "Gurugram (Sector 5)",
+            "address": "185 P, opposite Huda ground, Sector 5, Gurugram, Haryana 122001",
+            "phone": "+91 93507 63054",
+            "rating": 4.6,
+            "rating_count": 900,
+            "maps_url": null,
+            "place_id": "ChIJXU3_X24iDTkRwNg1Vlc3tAk"
+          },
+          {
+            "name": "Dr Nupur Gupta (Well Woman Clinic)",
+            "specialization": "General gynec / secondary infertility",
+            "area": "Gurugram (Nirvana Country)",
+            "address": "Nirvana Courtyard, C 815, Nirvana Country, Sector 50, Gurugram, Haryana 122018",
+            "phone": "+91 80 4463 4467",
+            "rating": 4.9,
+            "rating_count": 434,
+            "maps_url": null,
+            "place_id": "ChIJxfuvzXoiDTkRnb2wWC_e15s"
+          },
+          {
+            "name": "Dr. Swati Rai",
+            "specialization": "General gynec",
+            "area": "Noida (Sector 50)",
+            "address": "Aaradhya Neuro and Gynae Clinic, D Block, Sector 50, Noida, UP 201303",
+            "phone": "+91 93053 13492",
+            "rating": 4.9,
+            "rating_count": 931,
+            "maps_url": null,
+            "place_id": "ChIJgft87ZvlDDkRT0dy6L04xWk"
+          },
+          {
+            "name": "Dr Manisha Ranjan",
+            "specialization": "General gynec / obstetrician",
+            "area": "Noida (Sector 51)",
+            "address": "B 170, Block B, Sector 51, Noida, UP 201303",
+            "phone": "+91 97735 07333",
+            "rating": 4.6,
+            "rating_count": 775,
+            "maps_url": null,
+            "place_id": "ChIJX6QK1pblDDkRO5QNBEv5U4M"
+          },
+          {
+            "name": "Dr Uma Mishra",
+            "specialization": "General gynec / obstetrician",
+            "area": "Noida (Sector 75)",
+            "address": "UGF-16, Panchsheel Pratishtha, Sector 75, Noida, UP 201301",
+            "phone": "+91 81305 50269",
+            "rating": 4.9,
+            "rating_count": 874,
+            "maps_url": null,
+            "place_id": "ChIJVRD6wG3vDDkRGTACwFR-iX0"
+          },
+          {
+            "name": "Dr Deepa Gupta",
+            "specialization": "Obstetrician / infertility",
+            "area": "Noida (Sector 12)",
+            "address": "T-4, Block T, Sector 12, Noida, UP 201301",
+            "phone": "+91 78350 73361",
+            "rating": 4.9,
+            "rating_count": 647,
+            "maps_url": null,
+            "place_id": "ChIJqdpU07PlDDkR0d36I0IpuS8"
+          }
+        ]
+      },
+      "practo_tier": {
+        "description": "Not yet curated for this metro.",
+        "doctors": []
+      }
+    },
+    "hyderabad": {
+      "google_places_tier": {
+        "description": "Map + call directly. Sourced from Google Places.",
+        "doctors": [
+          {
+            "name": "Dr. Dimple Mishra",
+            "specialization": "Fertility / fibroids & PCOS treatment",
+            "area": "Nallagandla",
+            "address": "Shop No.3, Concrete Cornet, Nallagandla HUDA Trade Center, Serilingampalle, Hyderabad 500019",
+            "phone": "+91 62900 59041",
+            "rating": 4.9,
+            "rating_count": 734,
+            "maps_url": null,
+            "place_id": "ChIJgQAtwPCTyzsRF3x6lGepMzM"
+          },
+          {
+            "name": "DR PRIYANKA GUPTA",
+            "specialization": "Infertility / laparoscopic surgery / hormonal imbalance",
+            "area": "Punjagutta",
+            "address": "Bhavya Labs and Clinic, Yashoda Hospital Rd, Durga Nagar Colony, Punjagutta, Hyderabad 500082",
+            "phone": "+91 91490 19832",
+            "rating": 4.9,
+            "rating_count": 243,
+            "maps_url": null,
+            "place_id": "ChIJ2cp4EKmRyzsRtGM1GeotTEs"
+          },
+          {
+            "name": "Dr. Zainab",
+            "specialization": "Obstetrician / infertility specialist",
+            "area": "Kishan Bagh",
+            "address": "New Majestic Hospital, Shariff Nagar, Kishan Bagh, Hyderabad 500064",
+            "phone": null,
+            "rating": 4.9,
+            "rating_count": 815,
+            "maps_url": null,
+            "place_id": "ChIJyYhfGo-XyzsR7P1pan1U9u8"
+          },
+          {
+            "name": "Dr. Rooma Sinha",
+            "specialization": "General gynec / surgeon",
+            "area": "Jubilee Hills",
+            "address": "Apollo Health Street, Rd Number 72, Jubilee Hills, Hyderabad 500096",
+            "phone": "+91 80 6904 9769",
+            "rating": 4.9,
+            "rating_count": 582,
+            "maps_url": null,
+            "place_id": "ChIJb-FhDySXyzsRpgSdEGduzBM"
+          },
+          {
+            "name": "Dr. Vasundara Cheepurupalli",
+            "specialization": "Gynec surgeon / robotic surgery",
+            "area": "Secunderabad",
+            "address": "KIMS Hospitals, Minister Rd, Krishna Nagar Colony, Ramgopalpet, Secunderabad 500003",
+            "phone": "+91 93468 25723",
+            "rating": 4.9,
+            "rating_count": 893,
+            "maps_url": null,
+            "place_id": "ChIJiyXAfX6byzsRHJUO6rdoXOs"
+          },
+          {
+            "name": "Dr. Kalpana M",
+            "specialization": "General gynec / IVF",
+            "area": "Secunderabad",
+            "address": "Kasturi Hospital & IVF Centre, St. John's Road, Chilakalguda, Secunderabad 500003",
+            "phone": "+91 91210 12534",
+            "rating": 4.9,
+            "rating_count": 485,
+            "maps_url": null,
+            "place_id": "ChIJG4Lch82ZyzsRIOKolh96ld8"
+          },
+          {
+            "name": "Dr. Priyadarshini Pampana",
+            "specialization": "General gynec / obstetrician",
+            "area": "Himayatnagar",
+            "address": "Avila Women & Child Clinic, Gandhinagar Main Road, Himayatnagar, Hyderabad 500029",
+            "phone": "+91 63030 67878",
+            "rating": 5.0,
+            "rating_count": 198,
+            "maps_url": null,
+            "place_id": "ChIJscAfQYSZyzsRqqF1vWhre7o"
+          },
+          {
+            "name": "Dr Suneetha Kumari P",
+            "specialization": "General gynec",
+            "area": "Gachibowli",
+            "address": "Plot No 3, Road No. 2, Financial District, Gachibowli, Hyderabad 500032",
+            "phone": "+91 40 6700 0020",
+            "rating": 4.9,
+            "rating_count": 102,
+            "maps_url": null,
+            "place_id": "ChIJfdgJIS2VyzsR7WHgCovjBUE"
+          },
+          {
+            "name": "Dr. Faiza Waliullah",
+            "specialization": "General gynec / obstetrician",
+            "area": "Banjara Hills",
+            "address": "Ankura Hospital for Women & Children, Road No. 12, Banjara Hills, Hyderabad 500034",
+            "phone": "+91 90531 08108",
+            "rating": 5.0,
+            "rating_count": 29,
+            "maps_url": null,
+            "place_id": "ChIJ4zeRo1CXyzsRrF4t5W5ChkU"
+          },
+          {
+            "name": "Dr Sri Theja Reddy",
+            "specialization": "General gynec / fertility",
+            "area": "Chanda Nagar",
+            "address": "Divi Speciality Clinics, Ratnadeep main road, Gangaram, Chanda Nagar, Hyderabad 500050",
+            "phone": "+91 70311 99199",
+            "rating": 5.0,
+            "rating_count": 488,
+            "maps_url": null,
+            "place_id": "ChIJOSf0D12TyzsRQXa9Hs2akQ0"
+          },
+          {
+            "name": "Dr. Vimee Bindra",
+            "specialization": "Endometriosis specialist",
+            "area": "Film Nagar",
+            "address": "Apollo Hospital, SBI Colony, Film Nagar, Hyderabad 500096",
+            "phone": "+91 95737 11837",
+            "rating": 4.8,
+            "rating_count": 573,
+            "maps_url": null,
+            "place_id": "ChIJba4a1jeRyzsR-NsBRpUm4nc"
+          }
+        ]
+      },
+      "practo_tier": {
+        "description": "Not yet curated for this metro.",
+        "doctors": []
+      }
+    },
+    "kolkata": {
+      "google_places_tier": {
+        "description": "Map + call directly. Sourced from Google Places.",
+        "doctors": [
+          {
+            "name": "Dr. Sohini Chaudhury",
+            "specialization": "PCOD/PCOS / fibroid",
+            "area": "Gariahat",
+            "address": "20/1/1M, Ballygunge Station Rd, Golpark, Gariahat, Kolkata 700019",
+            "phone": "+91 76030 35536",
+            "rating": 5.0,
+            "rating_count": 43,
+            "maps_url": null,
+            "place_id": "ChIJYeG83W53AjoR3Fg_WESiBPc"
+          },
+          {
+            "name": "Dr. Sunipa Chatterjee",
+            "specialization": "Obstetrician / laparoscopic surgeon / fertility",
+            "area": "Beleghata",
+            "address": "PSR Healthcare, Beleghata Main Rd, Kulia, Beleghata, Kolkata 700010",
+            "phone": "+91 98364 02309",
+            "rating": 5.0,
+            "rating_count": 88,
+            "maps_url": null,
+            "place_id": "ChIJpy48xt51AjoRPCAk86MBNcc"
+          },
+          {
+            "name": "Dr Ushasi Mukherjee",
+            "specialization": "General gynec",
+            "area": "Santoshpur",
+            "address": "10, New Santoshpur 1st Ln, Eastern Park, Santoshpur, Kolkata 700075",
+            "phone": "+91 94325 67895",
+            "rating": 4.8,
+            "rating_count": 3210,
+            "maps_url": null,
+            "place_id": "ChIJSc1nj6ZxAjoRRTj7PBnbM9g"
+          },
+          {
+            "name": "Dr Lahori Roy",
+            "specialization": "High-risk pregnancy / laparoscopic surgeon",
+            "area": "Alipore",
+            "address": "8/5, Alipore Rd, Alipore, Kolkata 700027",
+            "phone": "+91 93316 58741",
+            "rating": 4.9,
+            "rating_count": 925,
+            "maps_url": null,
+            "place_id": "ChIJjVVEUpl7AjoRR9Kq2vYCPhI"
+          },
+          {
+            "name": "Dr. Kriti Agarwal",
+            "specialization": "Fertility / laparoscopic / IVF",
+            "area": "Phoolbagan",
+            "address": "Nidaan Polyclinic, Hem Chandra Naskar Rd, Phoolbagan, Beleghata, Kolkata 700010",
+            "phone": "+91 93300 99305",
+            "rating": 4.9,
+            "rating_count": 223,
+            "maps_url": null,
+            "place_id": "ChIJZTAazRF3AjoRkCvnJ0W8d18"
+          },
+          {
+            "name": "Dr Ankita Mandal",
+            "specialization": "Laparoscopic surgeon / IVF",
+            "area": "Kestopur / Phoolbagan",
+            "address": "13A H C Naskar Rd, Subhas Sarobar Park, Phoolbagan, Beleghata, Kolkata 700010",
+            "phone": "+91 89021 35575",
+            "rating": 4.9,
+            "rating_count": 1076,
+            "maps_url": null,
+            "place_id": "ChIJHTMO3Xd3AjoRWPbQ1MPtrRM"
+          },
+          {
+            "name": "Dr Rimjhim Paul",
+            "specialization": "Laparoscopic surgeon",
+            "area": "Kalindi / South Dumdum",
+            "address": "Suraksha Diagnostics, Jessore Rd, Kalindi Housing Estate, South Dumdum, Kolkata 700048",
+            "phone": "+91 91470 88636",
+            "rating": 5.0,
+            "rating_count": 57,
+            "maps_url": null,
+            "place_id": "ChIJGVaX7xR3AjoRCJfAwtMz-20"
+          },
+          {
+            "name": "Dr. Nandini Chakrabarti",
+            "specialization": "General gynec / laparoscopic surgeon",
+            "area": "Bidhannagar",
+            "address": "AK-278, AK Block, Sector 2, Bidhannagar, Kolkata 700091",
+            "phone": "+91 91237 13650",
+            "rating": 4.6,
+            "rating_count": 82,
+            "maps_url": null,
+            "place_id": "ChIJD4Z5qfJ1AjoRpZ2NgSOPW4A"
+          },
+          {
+            "name": "Dr Priyanka Sinha",
+            "specialization": "General gynec / endometriosis",
+            "area": "Kankurgachi",
+            "address": "Apollo Multispeciality Hospitals, Canal Circular Rd, Kankurgachi, Kolkata 700054",
+            "phone": "+91 80 6297 2764",
+            "rating": 4.9,
+            "rating_count": 264,
+            "maps_url": null,
+            "place_id": "ChIJ6xyMdWJ3AjoRc_ttxexxqb0"
+          }
+        ]
+      },
+      "practo_tier": {
+        "description": "Not yet curated for this metro.",
+        "doctors": []
+      }
+    }
+  }
+}

@@ -1,0 +1,57 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    color: #222;
+    line-height: 1.5;
+}
+
+.site-header { border-bottom: 1px solid #ddd; margin-bottom: 24px; padding-bottom: 12px; }
+.subtitle { color: #666; font-size: 0.9em; }
+nav a { margin-right: 16px; text-decoration: none; color: #6b4ba1; font-weight: 600; }
+
+textarea, input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+button {
+    background: #6b4ba1;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+}
+button:hover { background: #55397f; }
+
+.answer-box {
+    background: #f7f5fb;
+    border-left: 4px solid #6b4ba1;
+    padding: 16px;
+    margin-top: 20px;
+    border-radius: 4px;
+}
+
+.doctor-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 14px;
+    margin-bottom: 12px;
+}
+.doctor-card .specialization { color: #6b4ba1; font-weight: 600; margin: 4px 0; }
+
+.disclaimer-banner {
+    margin-top: 40px;
+    padding-top: 16px;
+    border-top: 1px solid #ddd;
+    font-size: 0.85em;
+    color: #777;
+}
+.disclaimer-inline { font-size: 0.85em; color: #777; margin-top: 16px; }
+.mode-note { color: #666; font-size: 0.9em; }

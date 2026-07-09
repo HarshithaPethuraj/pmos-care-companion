@@ -1,0 +1,27 @@
+Research Notes: PMOS Renaming (2026) and Lifestyle Management Evidence
+
+SOURCE NOTE: Compiled from publicly reported summaries. For primary sources, see The Lancet (May 2026 renaming consensus) and the cited systematic reviews.
+
+1. THE 2026 RENAMING OF PCOS TO PMOS
+
+In May 2026, an international consensus published in The Lancet renamed Polycystic Ovary Syndrome (PCOS) to Polyendocrine Metabolic Ovarian Syndrome (PMOS). The change followed a multi-year global collaboration involving many medical organizations, patient advocates, and a large body of survey input. The rationale: the old name over-emphasized ovarian "cysts" (which are actually follicles, and are not always present) and framed the condition as purely reproductive. The new name emphasizes that it is a multi-system disorder involving multiple hormone systems (polyendocrine) and metabolism (including insulin resistance), while retaining the ovarian component. Goals of the change include reducing stigma and diagnostic confusion, and encouraging comprehensive long-term care that addresses metabolic and cardiovascular health. Existing diagnoses remain valid, treatment is unchanged, and full adoption across records, textbooks, and coding is expected to take approximately three years, so both terms will coexist during the transition.
+
+2. LIFESTYLE MANAGEMENT AS FIRST-LINE THERAPY
+
+Across reviews and guidelines, multicomponent lifestyle intervention is consistently positioned as the foundation of PMOS/PCOS management. It combines dietary modification, physical activity, and behavioural strategies. The mechanism of benefit is largely through improving insulin sensitivity: insulin resistance underlies many features of the condition, and reducing it tends to improve menstrual regularity, androgen-related symptoms, and metabolic markers.
+
+3. DIET EVIDENCE
+
+No single dietary pattern has been established as clearly superior for all patients. Both Mediterranean-style and lower-carbohydrate patterns have shown favourable effects in studies. The practical consensus is that adherence and sustainability matter more than the specific named diet. Caloric moderation supporting gradual weight management is a common thread.
+
+4. WEIGHT AND METABOLIC HEALTH
+
+In patients with overweight or obesity, weight loss of approximately 5 to 10 percent is associated with meaningful improvement in reproductive and metabolic outcomes. Obesity exacerbates insulin resistance, which worsens the overall symptom profile, making weight management a high-leverage intervention where applicable. This is framed as one tool among several and is not relevant or appropriate for every patient.
+
+5. COMORBIDITY AND LONG-TERM RISK
+
+PMOS/PCOS is associated with elevated risk of insulin resistance, type 2 diabetes, and cardiovascular disease, as well as effects on fertility and psychological wellbeing. This supports the reframing of the condition as an enduring, lifelong, multi-system diagnosis warranting periodic metabolic and cardiovascular screening rather than episodic reproductive-only care.
+
+6. PHARMACOLOGICAL ADJUNCTS (RESEARCH CONTEXT)
+
+Beyond first-line lifestyle measures, the evidence base discusses agents including metformin (metabolic and menstrual benefit), combined hormonal contraceptives (menstrual and hyperandrogenism management), and ovulation-induction agents such as letrozole (preferred) and clomiphene citrate for those seeking pregnancy. Newer metabolic agents continue to be studied. Any medication decision belongs with a qualified clinician.

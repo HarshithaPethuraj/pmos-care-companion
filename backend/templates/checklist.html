@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block title %}Symptom Checklist - PMOS Care Companion{% endblock %}
+{% block content %}
+    <section class="checklist-panel">
+        <h2>Rotterdam Criteria Checklist</h2>
+        <p class="mode-note">Reference tool only &mdash; not a diagnosis. Requires 2 of 3 criteria.</p>
+
+        <form id="checklist-form">
+            <label><input type="checkbox" id="irregular_cycles"> Irregular menstrual cycles (fewer than 8/year or cycles &gt;35 days)</label><br>
+            <label><input type="checkbox" id="clinical_hyperandrogenism"> Visible signs (hirsutism, acne, hair thinning)</label><br>
+            <label><input type="checkbox" id="biochemical_hyperandrogenism"> Elevated androgens on lab work</label><br>
+            <label><input type="checkbox" id="polycystic_ovaries_on_usg"> Polycystic ovaries on ultrasound</label><br>
+            <button type="button" onclick="submitChecklist()">Check</button>
+        </form>
+
+        <div id="result"></div>
+    </section>
+
+    <script>
+        async function submitChecklist() {
+            const payload = {
+                irregular_cycles: document.getElementById('irregular_cycles').checked,
+                clinical_hyperandrogenism: document.getElementById('clinical_hyperandrogenism').checked,
+                biochemical_hyperandrogenism: document.getElementById('biochemical_hyperandrogenism').checked,
+                polycystic_ovaries_on_usg: document.getElementById('polycystic_ovaries_on_usg').checked,
+            };
+            const res = await fetch('/api/v1/checklist', {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify(payload),
+            });
+            const data = await res.json();
+            document.getElementById('result').innerHTML = `
+                <p><strong>Criteria met:</strong> ${data.criteria_met_count} of 3</p>
+                <ul>${data.criteria_met.map(c => `<li>${c}</li>`).join('')}</ul>
+                <p><strong>Meets Rotterdam threshold (2 of 3):</strong> ${data.meets_rotterdam_threshold ? 'Yes' : 'No'}</p>
+                <p class="disclaimer-inline">${data.disclaimer}</p>
+            `;
+        }
+    </script>
+{% endblock %}

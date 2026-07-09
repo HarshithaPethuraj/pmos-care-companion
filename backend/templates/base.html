@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}PMOS Care Companion{% endblock %}</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <header class="site-header">
+        <h1>PMOS Care Companion</h1>
+        <p class="subtitle">formerly known as PCOS &mdash; renamed May 2026 (Lancet consensus)</p>
+        <nav>
+            <a href="/?mode=patient">Patient Mode</a>
+            <a href="/?mode=clinician">Clinician Mode</a>
+            <a href="/checklist">Symptom Checklist</a>
+            <a href="/doctors">Find a Doctor</a>
+        </nav>
+    </header>
+
+    <main class="content">
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer class="disclaimer-banner">
+        This tool is for informational purposes only and is not a substitute for
+        professional medical advice, diagnosis, or treatment.
+    </footer>
+</body>
+</html>

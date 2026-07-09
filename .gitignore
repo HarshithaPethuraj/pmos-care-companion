@@ -1,0 +1,11 @@
+.env
+__pycache__/
+*.pyc
+.venv/
+venv/
+backend/knowledge_base/processed/faiss_index/*
+backend/knowledge_base/processed/bm25_index.pkl
+backend/knowledge_base/processed/chunks/*
+.DS_Store
+*.log
+node_modules/
