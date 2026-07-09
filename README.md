@@ -34,22 +34,22 @@ Most PCOS/PMOS projects on GitHub are **black-box ML classifiers** — a model p
 
 ## Features
 
-### 🗣️ Patient Mode
+### 1) Patient Mode
 Plain-language, empathetic answers about symptoms, lifestyle, and diet. Every response cites its source document and ends with a "consult your doctor" disclaimer. Retrieval is filtered to patient-appropriate sources (ACOG / Mayo Clinic / NIH fact sheets).
 
-### 🩻 Clinician Mode
+### 2) Clinician Mode
 Technical, evidence-based summaries grounded in the ESHRE/ASRM 2023 International Guideline. Includes differential-diagnosis notes (thyroid dysfunction, hyperprolactinemia, Cushing's syndrome) and precise guideline references. Retrieval is filtered to clinician-appropriate sources.
 
-### ✅ Rotterdam Criteria Checklist
+### 3) Rotterdam Criteria Checklist
 A transparent rule engine (no ML) evaluating the 3 Rotterdam criteria — irregular cycles, hyperandrogenism, polycystic ovarian morphology. Shows which criteria are met and whether the 2-of-3 threshold is reached. Explicitly **not a diagnosis**; recommends clinical confirmation. Includes an optional "Other Symptoms" tracker to bring to a doctor's appointment.
 
-### 🧪 Understand Your Blood Test
+### 4) Understand Your Blood Test
 An educational explainer for PMOS-relevant blood markers (testosterone, SHBG, LH, FSH, AMH, prolactin, TSH, 17-OHP, fasting insulin, HbA1c, lipid panel). Explains what each marker means and what to ask a doctor — grounded in the knowledge base. **Deliberately does not accept file uploads or interpret personal values**, avoiding the privacy and misdiagnosis risks of reading real reports.
 
-### 🛡️ Safety Guardrails
+### 5) Safety Guardrails
 A layered defense: fast regex pre-filters, an LLM safety classifier that routes each query to `ALLOW_SAFE` / `BLOCK_DIAGNOSE` / `ESCALATE_RED_FLAG`, and a **two-layer prompt-injection defense** (regex scan + LLM classifier) that excludes malicious retrieved chunks from the context before they reach the LLM.
 
-### 📍 Find a Doctor
+### 6) Find a Doctor
 A curated directory of 100+ gynecologists across **7 Indian metros** (Chennai, Bengaluru, Mumbai, Delhi, NCR, Hyderabad, Kolkata), with PCOS/PMOS-focused specialists flagged. Falls back to a live API search for any city not in the curated list. Includes an explicit "not a referral or endorsement" disclaimer.
 
 ---
