@@ -14,6 +14,28 @@
         </form>
 
         <div id="result"></div>
+
+        <hr style="margin: 28px 0;">
+
+        <h2>Other Symptoms (optional)</h2>
+        <p class="mode-note">
+            These are <strong>not</strong> part of the diagnostic criteria. They're common
+            PMOS-related experiences you can track and share with your doctor to give a fuller picture.
+        </p>
+
+        <form id="tracker-form">
+            <label><input type="checkbox" class="tracker" value="Weight changes / difficulty managing weight"> Weight changes or difficulty managing weight</label><br>
+            <label><input type="checkbox" class="tracker" value="Hair loss / scalp thinning"> Hair loss or scalp thinning</label><br>
+            <label><input type="checkbox" class="tracker" value="Skin changes (oily skin, dark patches)"> Skin changes (oily skin, dark patches / acanthosis)</label><br>
+            <label><input type="checkbox" class="tracker" value="Mood changes / anxiety / low mood"> Mood changes, anxiety, or low mood</label><br>
+            <label><input type="checkbox" class="tracker" value="Fatigue / low energy"> Fatigue or low energy</label><br>
+            <label><input type="checkbox" class="tracker" value="Difficulty getting pregnant"> Difficulty getting pregnant</label><br>
+            <label><input type="checkbox" class="tracker" value="Sleep problems"> Sleep problems</label><br>
+            <label><input type="checkbox" class="tracker" value="Sugar cravings / frequent hunger"> Sugar cravings or frequent hunger</label><br>
+            <button type="button" onclick="summariseTracker()">Summarise for my doctor</button>
+        </form>
+
+        <div id="tracker-result"></div>
     </section>
 
     <script>
@@ -35,6 +57,20 @@
                 <ul>${data.criteria_met.map(c => `<li>${c}</li>`).join('')}</ul>
                 <p><strong>Meets Rotterdam threshold (2 of 3):</strong> ${data.meets_rotterdam_threshold ? 'Yes' : 'No'}</p>
                 <p class="disclaimer-inline">${data.disclaimer}</p>
+            `;
+        }
+
+        function summariseTracker() {
+            const checked = Array.from(document.querySelectorAll('.tracker:checked')).map(c => c.value);
+            const box = document.getElementById('tracker-result');
+            if (checked.length === 0) {
+                box.innerHTML = '<p class="disclaimer-inline">No other symptoms selected.</p>';
+                return;
+            }
+            box.innerHTML = `
+                <p><strong>Symptoms to mention to your doctor:</strong></p>
+                <ul>${checked.map(s => '<li>' + s + '</li>').join('')}</ul>
+                <p class="disclaimer-inline">This is a personal record, not a diagnosis. Bring it to your appointment to help the conversation.</p>
             `;
         }
     </script>
