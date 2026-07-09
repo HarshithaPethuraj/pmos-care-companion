@@ -17,8 +17,9 @@ class Settings(BaseSettings):
     llm_model_small: str = "llama-3.1-8b-instant"
 
     # Embeddings / retrieval
-    embedding_model: str = "BAAI/bge-base-en-v1.5"
+    embedding_model: str = "sentence-transformers/all-MiniLM-L6-v2"
     reranker_model: str = "cross-encoder/ms-marco-MiniLM-L-6-v2"
+    enable_reranker: bool = False  # set True only on hosts with >1GB RAM
 
     # Doctor directory - dynamic fallback
     google_places_api_key: str = ""
