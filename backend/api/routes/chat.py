@@ -24,9 +24,10 @@ async def chat_api(payload: ChatInput):
 
 
 @router.get("/", response_class=HTMLResponse)
-async def chat_page_get(request: Request):
+async def chat_page_get(request: Request, mode: str = "patient"):
     templates = request.app.state.templates
-    return templates.TemplateResponse(request, "patient_mode.html", {})
+    template_name = "clinician_mode.html" if mode == "clinician" else "patient_mode.html"
+    return templates.TemplateResponse(request, template_name, {})
 
 
 @router.post("/ask", response_class=HTMLResponse)
