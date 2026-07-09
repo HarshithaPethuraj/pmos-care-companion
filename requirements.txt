@@ -6,20 +6,13 @@ python-multipart
 pydantic
 pydantic-settings
 
-# RAG stack (versions aligned with IntelliRAG working set)
-langchain
-langchain-community
-langchain-groq
-langchain-huggingface
-langchain-text-splitters
-faiss-cpu
-sentence-transformers
+# Lightweight RAG stack (torch-free, fits 512MB)
+scikit-learn
 rank-bm25
+numpy
 pypdf
-docx2txt
 
 # LLM client + utils
 groq
 requests
-numpy
 python-dotenv
