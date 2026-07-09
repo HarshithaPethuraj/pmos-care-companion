@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block title %}Understand Your Blood Test - PMOS Care Companion{% endblock %}
+{% block content %}
+    <section class="chat-panel">
+        <h2>Understand your blood test</h2>
+        <p class="mode-note">{{ intro }}</p>
+
+        <form action="/markers" method="post">
+            <p style="font-weight:600; margin-bottom:10px;">Pick a marker:</p>
+            <div class="marker-chips">
+                {% for m in markers %}
+                <button type="submit" name="marker" value="{{ m }}"
+                    class="marker-chip{% if selected == m %} marker-chip-active{% endif %}">{{ m }}</button>
+                {% endfor %}
+            </div>
+        </form>
+
+        <form action="/markers" method="post" style="margin-top:16px;">
+            <p style="font-weight:600; margin-bottom:8px;">Or type a marker from your report:</p>
+            <input type="text" name="marker" placeholder="e.g. free testosterone, vitamin D" value="{{ selected or '' }}">
+            <button type="submit">Explain</button>
+        </form>
+
+        {% if answer_html %}
+        <div class="answer-box">
+            <h3>{{ selected }}</h3>
+            {{ answer_html | safe }}
+        </div>
+        {% endif %}
+    </section>
+{% endblock %}
