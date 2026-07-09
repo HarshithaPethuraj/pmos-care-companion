@@ -29,8 +29,13 @@ def get_embeddings():
 @lru_cache()
 def get_reranker():
     settings = get_settings()
+    if not settings.enable_reranker:
+        # Disabled on low-memory hosts (e.g. Render free tier, 512MB).
+        # Retrieval still works via BM25 + FAISS + RRF; only the final
+        # cross-encoder rerank step is skipped.
+        return None
     try:
         from sentence_transformers import CrossEncoder
-        return CrossEncoder(settings.reranker_model)  # ms-marco-MiniLM-L-6-v2
+        return CrossEncoder(settings.reranker_model)
     except Exception:
         return None
