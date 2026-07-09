@@ -1,0 +1,47 @@
+PMOS Blood Test Markers - What They Mean and Why They Matter
+
+SOURCE NOTE: Educational summary of blood markers commonly checked in PMOS/PCOS assessment, consistent with ESHRE/ASRM 2023 guidance and standard endocrine practice. For interpretation of your own results, consult your doctor - reference ranges vary by lab and individual.
+
+WHY BLOOD TESTS ARE USED IN PMOS
+
+Blood tests are not used alone to diagnose PMOS - diagnosis follows the Rotterdam criteria (2 of 3: irregular ovulation, signs of high androgens, polycystic ovaries on ultrasound). Blood work supports the picture in two ways: it helps confirm biochemical hyperandrogenism (one route to meeting the androgen criterion), and it helps exclude other conditions that mimic PMOS. It also flags metabolic risks that matter for long-term care.
+
+TESTOSTERONE (TOTAL AND FREE)
+
+Testosterone is the main androgen measured. In PMOS it may be elevated, contributing to symptoms like excess hair growth, acne, or scalp hair thinning. "Free" testosterone (the unbound, active fraction) is often more informative than total. Note that a normal testosterone level does not rule out PMOS - many people meet the criteria through clinical signs or ultrasound instead. A markedly high level would prompt a doctor to check for other causes. Question to ask your doctor: "Do my androgen levels explain my symptoms, or should other causes be checked?"
+
+SHBG (SEX HORMONE BINDING GLOBULIN)
+
+SHBG is a protein that binds testosterone and keeps it inactive. When SHBG is low (common in insulin resistance), more free testosterone circulates even if total testosterone looks normal. This is why doctors sometimes calculate a "free androgen index" from testosterone and SHBG together.
+
+LH AND FSH (LUTEINIZING HORMONE, FOLLICLE STIMULATING HORMONE)
+
+These pituitary hormones govern the menstrual cycle. In PMOS the LH to FSH ratio can be raised, though this is no longer a required diagnostic criterion and a normal ratio does not exclude PMOS. FSH is more useful for excluding other causes of irregular cycles, such as ovarian insufficiency. Timing in the cycle affects these values.
+
+AMH (ANTI-MULLERIAN HORMONE)
+
+AMH reflects the number of small follicles in the ovaries and tends to be higher in PMOS. Per the 2023 guideline, AMH may be used in adults as an alternative to the ultrasound follicle count for defining polycystic ovarian morphology, but it should not be used in adolescents. It is a supporting marker, not a standalone diagnosis.
+
+PROLACTIN
+
+Prolactin is checked to exclude hyperprolactinemia, a separate condition that can also cause irregular periods and mimic PMOS. An elevated prolactin points away from PMOS as the sole explanation and toward further evaluation.
+
+TSH (THYROID STIMULATING HORMONE)
+
+TSH screens thyroid function. Both underactive and overactive thyroid can disrupt menstrual cycles and are part of the standard "exclude other causes" workup before confirming PMOS.
+
+17-HYDROXYPROGESTERONE (17-OHP)
+
+This is measured to exclude non-classic congenital adrenal hyperplasia (NCAH), an inherited condition that can closely resemble PMOS with high androgens and irregular cycles. It is part of the differential diagnosis.
+
+FASTING GLUCOSE, FASTING INSULIN, AND HbA1c
+
+These assess metabolic health. Insulin resistance is common in PMOS and drives many of its features, so doctors monitor glucose handling. HbA1c reflects average blood sugar over about three months. For those with higher BMI, an oral glucose tolerance test (OGTT) may be recommended even when fasting glucose is normal, because it can reveal impaired glucose handling earlier. Question to ask your doctor: "Should I be screened for insulin resistance or diabetes risk?"
+
+LIPID PANEL (CHOLESTEROL, HDL, LDL, TRIGLYCERIDES)
+
+Because PMOS carries elevated cardiovascular risk over time, a lipid panel is part of periodic metabolic screening. It is about long-term risk management, not diagnosis.
+
+IMPORTANT FRAMING
+
+No single blood value confirms or rules out PMOS on its own. Results are interpreted together, in the context of symptoms, examination, and ultrasound, by a qualified clinician. Reference ranges differ between laboratories, and a value flagged "high" or "low" on a lab printout is not automatically meaningful without clinical context. Always review your actual results with your doctor.
