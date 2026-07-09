@@ -14,15 +14,6 @@ class FakeBM25:
         return self._scores
 
 
-class FakeVectorStore:
-    def __init__(self, chunks):
-        self._chunks = chunks
-
-    def similarity_search(self, query, k):
-        from types import SimpleNamespace
-        return [SimpleNamespace(page_content=c) for c in self._chunks[:k]]
-
-
 def test_classify_query_lexical_vs_semantic():
     assert classify_query('what is "Rotterdam criteria"') == "lexical"
     assert classify_query("PCOS diagnosis code 12345") == "lexical"
@@ -37,17 +28,20 @@ def test_mode_allows_filtering():
 
 
 def test_hybrid_retrieve_respects_mode_filter():
-    chunks = ["patient chunk", "clinician chunk", "shared chunk"]
+    chunks = ["patient chunk about diet", "clinician chunk about guidelines", "shared chunk on lifestyle"]
     metadatas = [{"mode": "patient"}, {"mode": "clinician"}, {"mode": "both"}]
     import numpy as np
-    bm25 = FakeBM25(np.array([1.0, 1.0, 1.0]))
-    vs = FakeVectorStore(chunks)
+    from sklearn.feature_extraction.text import TfidfVectorizer
 
-    results = hybrid_retrieve("test", vs, bm25, chunks, metadatas, mode="patient", pool=10)
+    bm25 = FakeBM25(np.array([1.0, 1.0, 1.0]))
+    vectorizer = TfidfVectorizer()
+    tfidf_matrix = vectorizer.fit_transform(chunks)
+
+    results = hybrid_retrieve("chunk", vectorizer, tfidf_matrix, bm25, chunks, metadatas, mode="patient", pool=10)
     returned_text = [c for c, _ in results]
-    assert "patient chunk" in returned_text
-    assert "shared chunk" in returned_text
-    assert "clinician chunk" not in returned_text
+    assert "patient chunk about diet" in returned_text
+    assert "shared chunk on lifestyle" in returned_text
+    assert "clinician chunk about guidelines" not in returned_text
 
 
 def test_injection_scan_catches_multiword_modifier():
