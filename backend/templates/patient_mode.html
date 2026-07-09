@@ -11,10 +11,10 @@
             <button type="submit">Ask</button>
         </form>
 
-        {% if answer %}
+        {% if answer_html %}
         <div class="answer-box">
             <h3>Answer</h3>
-            <p>{{ answer }}</p>
+            {{ answer_html | safe }}
         </div>
         {% endif %}
     </section>
