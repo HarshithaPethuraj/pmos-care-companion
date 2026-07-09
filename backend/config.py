@@ -20,6 +20,7 @@ class Settings(BaseSettings):
     embedding_model: str = "sentence-transformers/all-MiniLM-L6-v2"
     reranker_model: str = "cross-encoder/ms-marco-MiniLM-L-6-v2"
     enable_reranker: bool = False  # set True only on hosts with >1GB RAM
+    enable_llm_injection_check: bool = True  # second-layer defense beyond regex (small model, low cost)
 
     # Doctor directory - dynamic fallback
     google_places_api_key: str = ""
