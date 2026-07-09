@@ -1,29 +1,53 @@
 """
-Ingestion pipeline ported from IntelliRAG.
+Lightweight ingestion pipeline (torch-free, fits 512MB).
 
-Loads PMOS knowledge-base documents from backend/knowledge_base/raw/,
-chunks them (RecursiveCharacterTextSplitter, 600/100), embeds with
-bge-base-en-v1.5, and builds a FAISS vector store + BM25 index.
+Loads PMOS knowledge-base documents, chunks them, and builds:
+  - a TF-IDF matrix (scikit-learn) for semantic-ish similarity
+  - a BM25 index for lexical matching
+
+Replaces the previous FAISS + sentence-transformers stack, which needed
+torch (~800MB) and exceeded free-tier memory. TF-IDF + BM25 keeps genuine
+hybrid retrieval at a fraction of the memory.
 
 Metadata carries a `mode` tag ("patient" | "clinician" | "both") so retrieval
-can filter sources by audience, per the dual-mode design.
+can filter sources by audience.
 """
 from pathlib import Path
+import re
 
-from backend.services.embedding import get_embeddings
-
-# Maps KB subfolders to the audience mode their documents serve.
 FOLDER_MODE = {
-    "patient_faqs": "patient",   # ACOG / Mayo / NIH patient fact sheets
-    "guidelines": "clinician",   # ESHRE/ASRM 2023
-    "research": "both",          # PubMed abstracts
+    "patient_faqs": "patient",
+    "guidelines": "clinician",
+    "research": "both",
 }
 
 
-def _load_raw_documents(raw_dir: Path):
-    from langchain_core.documents import Document
-    from langchain_community.document_loaders import PyPDFLoader
+def _split_text(text: str, chunk_size: int = 600, overlap: int = 100):
+    """Simple recursive-ish splitter on paragraph/sentence boundaries."""
+    paras = re.split(r"\n\s*\n", text)
+    chunks, buf = [], ""
+    for p in paras:
+        p = p.strip()
+        if not p:
+            continue
+        if len(buf) + len(p) + 2 <= chunk_size:
+            buf = (buf + "\n\n" + p) if buf else p
+        else:
+            if buf:
+                chunks.append(buf)
+            if len(p) <= chunk_size:
+                buf = p
+            else:
+                # hard-wrap long paragraph
+                for i in range(0, len(p), chunk_size - overlap):
+                    chunks.append(p[i:i + chunk_size])
+                buf = ""
+    if buf:
+        chunks.append(buf)
+    return chunks
 
+
+def _load_raw_documents(raw_dir: Path):
     docs = []
     for subfolder, mode in FOLDER_MODE.items():
         folder = raw_dir / subfolder
@@ -32,36 +56,40 @@ def _load_raw_documents(raw_dir: Path):
         for path in folder.iterdir():
             suffix = path.suffix.lower()
             if suffix == ".pdf":
-                pages = PyPDFLoader(str(path)).load()
-                for i, p in enumerate(pages):
-                    p.metadata["source"] = path.name
-                    p.metadata["page"] = p.metadata.get("page", i) + 1
-                    p.metadata["mode"] = mode
-                docs.extend(pages)
+                try:
+                    from pypdf import PdfReader
+                    reader = PdfReader(str(path))
+                    for i, page in enumerate(reader.pages):
+                        text = page.extract_text() or ""
+                        if text.strip():
+                            docs.append((text, {"source": path.name, "page": i + 1, "mode": mode}))
+                except Exception:
+                    continue
             elif suffix in (".txt", ".md"):
                 text = path.read_text(encoding="utf-8", errors="ignore")
-                docs.append(Document(page_content=text, metadata={"source": path.name, "mode": mode}))
+                docs.append((text, {"source": path.name, "mode": mode}))
     return docs
 
 
 def build_index(raw_dir: str = "backend/knowledge_base/raw"):
-    """Returns (vectorstore, bm25, chunks, metadatas). Call once at startup."""
-    from langchain_text_splitters import RecursiveCharacterTextSplitter
-    from langchain_community.vectorstores import FAISS
+    """Returns (tfidf_vectorizer, tfidf_matrix, bm25, chunks, metadatas)."""
+    from sklearn.feature_extraction.text import TfidfVectorizer
     from rank_bm25 import BM25Okapi
 
-    docs = _load_raw_documents(Path(raw_dir))
-    if not docs:
-        return None, None, [], []
+    raw = _load_raw_documents(Path(raw_dir))
+    if not raw:
+        return None, None, None, [], []
 
-    splitter = RecursiveCharacterTextSplitter(
-        chunk_size=600, chunk_overlap=100, separators=["\n\n", "\n", ". ", " ", ""]
-    )
-    chunked = splitter.split_documents(docs)
-    chunks = [c.page_content for c in chunked]
-    metadatas = [c.metadata for c in chunked]
+    chunks, metadatas = [], []
+    for text, meta in raw:
+        for c in _split_text(text):
+            chunks.append(c)
+            metadatas.append(meta)
 
-    embeddings = get_embeddings()
-    vectorstore = FAISS.from_documents(chunked, embeddings)
+    if not chunks:
+        return None, None, None, [], []
+
+    vectorizer = TfidfVectorizer(stop_words="english", ngram_range=(1, 2), max_features=20000)
+    tfidf_matrix = vectorizer.fit_transform(chunks)
     bm25 = BM25Okapi([c.lower().split() for c in chunks])
-    return vectorstore, bm25, chunks, metadatas
+    return vectorizer, tfidf_matrix, bm25, chunks, metadatas
