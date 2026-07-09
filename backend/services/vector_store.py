@@ -1,30 +1,30 @@
 """
-Index singleton. Builds the FAISS + BM25 index and loads models once,
-then serves them to the RAG pipeline. Lazy: built on first access.
+Index singleton (torch-free). Builds the TF-IDF + BM25 index once and serves
+it to the RAG pipeline. Lazy: built on first access.
 
-If the knowledge base is empty (no PDFs added yet), `ready` is False and
-the pipeline falls back to answering without retrieved context.
+If the knowledge base is empty, `ready` is False and the pipeline answers
+without retrieved context.
 """
 from backend.core.rag.ingestion import build_index
-from backend.services.embedding import get_reranker
 
 
 class _IndexState:
     def __init__(self):
-        self.vectorstore = None
+        self.vectorizer = None
+        self.tfidf_matrix = None
         self.bm25 = None
         self.chunks = []
         self.metadatas = []
-        self.reranker = None
+        self.reranker = None  # not used on the lightweight tier
         self.ready = False
         self._built = False
 
     def build(self):
         if self._built:
             return
-        self.vectorstore, self.bm25, self.chunks, self.metadatas = build_index()
-        self.reranker = get_reranker()
-        self.ready = self.vectorstore is not None and len(self.chunks) > 0
+        (self.vectorizer, self.tfidf_matrix, self.bm25,
+         self.chunks, self.metadatas) = build_index()
+        self.ready = self.vectorizer is not None and len(self.chunks) > 0
         self._built = True
 
 
