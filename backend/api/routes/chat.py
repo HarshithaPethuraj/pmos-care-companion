@@ -40,12 +40,14 @@ async def chat_page_post(request: Request, query: str = Form(...), mode: str = F
         if not city:
             return templates.TemplateResponse(request, "patient_mode.html", {
                 "query": query,
-                "answer": "Which city are you looking in? (e.g. Chennai, Mumbai, Bengaluru, NCR)",
+                "answer_html": "<p>Which city are you looking in? (e.g. Chennai, Mumbai, Bengaluru, NCR)</p>",
             })
         # Redirect logic handled client-side or via RedirectResponse to /doctors?city=...
         from fastapi.responses import RedirectResponse
         return RedirectResponse(url=f"/doctors?city={city}", status_code=303)
 
     answer = run_rag_pipeline(query, mode)
+    from backend.utils.formatting import format_answer
+    answer_html = format_answer(answer)
     template_name = "clinician_mode.html" if mode == "clinician" else "patient_mode.html"
-    return templates.TemplateResponse(request, template_name, {"query": query, "answer": answer})
+    return templates.TemplateResponse(request, template_name, {"query": query, "answer_html": answer_html})
