@@ -38,8 +38,8 @@ def _retrieve_context(query: str, mode: str) -> tuple[str, list[str], float]:
         return "", [], 0.0
 
     reranked, _qtype = retrieve_and_rerank(
-        query, index.vectorstore, index.bm25, index.chunks, index.metadatas,
-        index.reranker, mode=mode, k=5,
+        query, index.vectorizer, index.tfidf_matrix, index.bm25,
+        index.chunks, index.metadatas, index.reranker, mode=mode, k=5,
     )
 
     # Prompt-injection filter: EXCLUDE flagged chunks from context.
