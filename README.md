@@ -15,6 +15,10 @@ license: mit
 
 Built to serve two audiences from one system: patients (plain, empathetic language) and clinicians (technical, guideline-cited detail), with safety guardrails and a curated doctor directory throughout.
 
+### 🔗 Live demo: **https://pmos-care-companion.onrender.com**
+
+> Note: the demo runs on a free tier that sleeps after inactivity, so the first load may take 30–60 seconds to wake up.
+
 ---
 
 ## Why this project is different
@@ -30,17 +34,20 @@ Most PCOS/PMOS projects on GitHub are **black-box ML classifiers** — a model p
 
 ## Features
 
-###  Patient Mode
+### 🗣️ Patient Mode
 Plain-language, empathetic answers about symptoms, lifestyle, and diet. Every response cites its source document and ends with a "consult your doctor" disclaimer. Retrieval is filtered to patient-appropriate sources (ACOG / Mayo Clinic / NIH fact sheets).
 
-###  Clinician Mode
+### 🩻 Clinician Mode
 Technical, evidence-based summaries grounded in the ESHRE/ASRM 2023 International Guideline. Includes differential-diagnosis notes (thyroid dysfunction, hyperprolactinemia, Cushing's syndrome) and precise guideline references. Retrieval is filtered to clinician-appropriate sources.
 
-###  Rotterdam Criteria Checklist
-A transparent rule engine (no ML) evaluating the 3 Rotterdam criteria — irregular cycles, hyperandrogenism, polycystic ovarian morphology. Shows which criteria are met and whether the 2-of-3 threshold is reached. Explicitly **not a diagnosis**; recommends clinical confirmation.
+### ✅ Rotterdam Criteria Checklist
+A transparent rule engine (no ML) evaluating the 3 Rotterdam criteria — irregular cycles, hyperandrogenism, polycystic ovarian morphology. Shows which criteria are met and whether the 2-of-3 threshold is reached. Explicitly **not a diagnosis**; recommends clinical confirmation. Includes an optional "Other Symptoms" tracker to bring to a doctor's appointment.
 
-###  Safety Guardrails
-A layered defense: fast regex pre-filters + an LLM safety classifier that routes each query to `ALLOW_SAFE`, `BLOCK_DIAGNOSE`, or `ESCALATE_RED_FLAG`. A prompt-injection scanner excludes malicious retrieved chunks from the context before they reach the LLM.
+### 🧪 Understand Your Blood Test
+An educational explainer for PMOS-relevant blood markers (testosterone, SHBG, LH, FSH, AMH, prolactin, TSH, 17-OHP, fasting insulin, HbA1c, lipid panel). Explains what each marker means and what to ask a doctor — grounded in the knowledge base. **Deliberately does not accept file uploads or interpret personal values**, avoiding the privacy and misdiagnosis risks of reading real reports.
+
+### 🛡️ Safety Guardrails
+A layered defense: fast regex pre-filters, an LLM safety classifier that routes each query to `ALLOW_SAFE` / `BLOCK_DIAGNOSE` / `ESCALATE_RED_FLAG`, and a **two-layer prompt-injection defense** (regex scan + LLM classifier) that excludes malicious retrieved chunks from the context before they reach the LLM.
 
 ### 📍 Find a Doctor
 A curated directory of 100+ gynecologists across **7 Indian metros** (Chennai, Bengaluru, Mumbai, Delhi, NCR, Hyderabad, Kolkata), with PCOS/PMOS-focused specialists flagged. Falls back to a live API search for any city not in the curated list. Includes an explicit "not a referral or endorsement" disclaimer.
@@ -63,11 +70,10 @@ User query
 ┌─────────────────────────────┐
 │ 2. Hybrid Retrieval         │
 │   • BM25 (lexical)           │
-│   • FAISS (semantic)         │  ← bge-base-en-v1.5 embeddings
+│   • TF-IDF (semantic)        │
 │   • Adaptive RRF fusion      │  ← weights shift by query type
-│   • Cross-encoder rerank     │  ← ms-marco-MiniLM-L-6-v2
 │   • Mode filter              │  ← patient vs clinician sources
-│   • Injection scan           │  ← drops malicious chunks
+│   • Injection scan (2 layer) │  ← regex + LLM classifier
 └─────────────┬───────────────┘
               ▼
 ┌─────────────────────────────┐
@@ -91,11 +97,10 @@ The rule engine and the RAG pipeline are **independent subsystems**. The checkli
 |-------|-----------|
 | Web framework | FastAPI + Jinja2 (server-rendered, single app) |
 | LLM | Groq-hosted LLaMA 3.3 70B (generation) + 3.1 8B (fast classification) |
-| Orchestration | LangChain |
-| Embeddings | BAAI/bge-base-en-v1.5 |
-| Retrieval | FAISS (semantic) + BM25 (lexical), Reciprocal Rank Fusion |
-| Reranking | Cross-encoder ms-marco-MiniLM-L-6-v2 |
-| Deployment | Docker (Hugging Face Spaces / Render) |
+| Embeddings / retrieval | TF-IDF (scikit-learn) + BM25, fused with Reciprocal Rank Fusion |
+| Deployment | Docker (Render / Hugging Face Spaces) |
+
+> **Note on retrieval:** the project originally used neural embeddings (BAAI/bge-base-en-v1.5) + FAISS + a cross-encoder reranker via LangChain. It was re-engineered to a lightweight TF-IDF + BM25 stack to fit within a 512MB free-tier memory limit — a deliberate tradeoff of some semantic nuance for zero-cost, GPU-free hosting. The full neural implementation remains in the git history.
 
 ---
 
@@ -112,17 +117,17 @@ pmos-care-companion/
     ├── main.py                   # FastAPI entry point
     ├── config.py                 # Pydantic settings
     ├── api/
-    │   ├── routes/               # health, checklist, chat, doctors, modes
+    │   ├── routes/               # health, checklist, chat, doctors, modes, markers
     │   └── schemas/              # request/response models
     ├── core/
     │   ├── rule_engine/          # Rotterdam criteria (no ML)
     │   ├── rag/                  # retrieval, rerank, prompts, pipeline
-    │   ├── guardrails/           # filters, classifier, red flags, injection
+    │   ├── guardrails/           # filters, classifier, red flags, two-layer injection defense
     │   └── doctors/              # curated + dynamic directory service
     ├── knowledge_base/           # source documents (patient / clinician / research)
     ├── services/                 # LLM, embedding, vector-store clients
     ├── templates/                # Jinja2 HTML
-    └── tests/                    # unit tests (rule engine, guardrails, retrieval)
+    └── tests/                    # unit tests (rule engine, guardrails, retrieval, injection)
 ```
 
 ---
@@ -155,18 +160,6 @@ docker run -p 7860:7860 --env-file .env pmos-care-companion
 
 ---
 
-## Knowledge Base
-
-Documents live in `backend/knowledge_base/raw/`, tagged by audience so retrieval never mixes them:
-
-- `patient_faqs/` → patient sources (ACOG, Mayo Clinic, NIH)
-- `guidelines/` → clinician sources (ESHRE/ASRM 2023)
-- `research/` → shared (lifestyle evidence, the 2026 Lancet PMOS renaming consensus)
-
-Supported formats: PDF, TXT, MD. The index rebuilds automatically at startup. If the knowledge base is empty, the app still runs and reports that information isn't available rather than hallucinating.
-
----
-
 ## Environment Variables
 
 | Variable | Required | Purpose |
@@ -180,40 +173,21 @@ The curated 7-metro doctor directory works without any Google keys.
 
 ---
 
-## Screenshots
-
-_(Add screenshots of Patient Mode, Clinician Mode, the Checklist, and Find a Doctor here.)_
-
-| Patient Mode | Clinician Mode |
-|:---:|:---:|
-| _screenshot_ | _screenshot_ |
-
-| Symptom Checklist | Find a Doctor |
-|:---:|:---:|
-| _screenshot_ | _screenshot_ |
-
----
-
-## A Note on the PMOS / PCOS Naming
-
-In May 2026, an international consensus published in *The Lancet* renamed Polycystic Ovary Syndrome (PCOS) to **Polyendocrine Metabolic Ovarian Syndrome (PMOS)**, to better reflect its multi-system, metabolic nature. The diagnostic criteria are unchanged. This project uses "PMOS" as the primary term while recognizing "PCOS" throughout, since both will coexist in the literature during the multi-year transition.
-
----
-
 ## ⚠️ Ethical & Legal Disclaimer
 
 This tool is for **informational and educational purposes only**. It is **not a medical device, not a diagnostic tool, and not a substitute for professional medical advice, diagnosis, or treatment.**
 
 - It does **not** diagnose PMOS/PCOS or any condition.
 - The Rotterdam checklist is a reference aid, not a clinical determination.
+- The blood-test explainer describes markers in general and does **not** interpret personal results.
 - The doctor directory is compiled from public listings and is **not** a referral or endorsement; verify credentials independently.
 - Always consult a qualified healthcare provider for any medical concern. Seek urgent care for severe symptoms.
 
 ---
 
-## Contributing
+## A Note on the PMOS / PCOS Naming
 
-Contributions are welcome. Please open an issue to discuss substantial changes before submitting a PR. For knowledge-base additions, ensure sources are authoritative and correctly tagged by audience mode.
+In May 2026, an international consensus published in *The Lancet* renamed Polycystic Ovary Syndrome (PCOS) to **Polyendocrine Metabolic Ovarian Syndrome (PMOS)**, to better reflect its multi-system, metabolic nature. The diagnostic criteria are unchanged. This project uses "PMOS" as the primary term while recognizing "PCOS" throughout, since both will coexist in the literature during the multi-year transition.
 
 ---
 
