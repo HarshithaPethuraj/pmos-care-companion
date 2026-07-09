@@ -280,6 +280,38 @@ hr {
     font-style: italic;
 }
 
+/* ---------- Marker chips ---------- */
+.marker-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+.marker-chip {
+    background: var(--paper);
+    color: var(--ink);
+    border: 1.5px solid var(--sage-line);
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all .15s;
+}
+.marker-chip:hover {
+    border-color: var(--sage);
+    background: var(--sage-soft);
+    color: var(--sage-deep);
+}
+.marker-chip-active {
+    background: var(--sage);
+    color: #fff;
+    border-color: var(--sage);
+}
+.marker-chip-active:hover {
+    background: var(--sage-deep);
+    color: #fff;
+}
+
 /* ---------- Responsive ---------- */
 @media (max-width: 560px) {
     .site-header { padding: 26px 20px 0; }
